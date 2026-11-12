@@ -1,0 +1,37 @@
+{
+  "features": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "gender_male",
+    "smoking_never",
+    "smoking_former",
+    "smoking_current",
+    "smoking_not_current",
+    "smoking_ever",
+    "smoking_No_Info"
+  ],
+  "numeric": [
+    "age",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level"
+  ],
+  "mean": {
+    "age": 41.749598526046775,
+    "bmi": 27.305729398829158,
+    "HbA1c_level": 5.530281418085644,
+    "blood_glucose_level": 138.10545006091942
+  },
+  "std": {
+    "age": 22.45376371666432,
+    "bmi": 6.748459958191248,
+    "HbA1c_level": 1.0738354786350783,
+    "blood_glucose_level": 40.9150859487918
+  },
+  "n_rows": 96146,
+  "positive_rate": 0.08821999875189815
+}

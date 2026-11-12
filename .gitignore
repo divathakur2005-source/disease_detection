@@ -1,0 +1,26 @@
+# Raw & processed datasets (large) -- download via scripts/download_data.py
+data/raw/
+data/processed/*.parquet
+data/processed/*.npy
+data/processed/images/
+
+# Trained weights (large) -- keep only small metrics/plots in git
+models/*.pt
+models/*.pth
+models/*.ckpt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml

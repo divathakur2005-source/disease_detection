@@ -1,0 +1,13 @@
+torch>=2.2
+torchvision>=0.17
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+opencv-python>=4.9
+pillow>=10
+matplotlib>=3.8
+seaborn>=0.13
+pyarrow>=14
+tqdm>=4.66
+streamlit>=1.32
+python-pptx>=1.0
