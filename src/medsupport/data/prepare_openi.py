@@ -54,16 +54,53 @@ def labels_from_mesh(mesh: str) -> np.ndarray:
     return np.array([1 if re.search(p, m) else 0 for p in THORACIC_LABELS.values()], dtype=np.int8)
 
 
+def _store(im: Image.Image, out: Path) -> None:
+    im = im.convert("L")
+    w, h = im.size
+    s = IMG_STORE_SIZE / min(w, h)
+    if s < 1:
+        im = im.resize((max(IMG_STORE_SIZE, round(w * s)), max(IMG_STORE_SIZE, round(h * s))), Image.BILINEAR)
+    im.save(out, optimize=True)
+
+
+def extract_images_nlm() -> dict[int, str]:
+    """Frontal images fetched from the NLM Open-I service (scripts/fetch_openi_images.py),
+    512 px PNGs named CXR<uid>_IM-xxxx-yyyy.png. Returns {uid: relative path}."""
+    src = DATA_RAW / "openi_nlm" / "images"
+    found: dict[int, str] = {}
+    if not src.exists():
+        return found
+    proj = pd.read_csv(DATA_RAW / "openi_meta" / "indiana_projections.csv")
+    frontal = proj[proj["projection"] == "Frontal"].drop_duplicates("uid")   # first frontal per uid
+    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+    for uid, fn in tqdm(zip(frontal["uid"], frontal["filename"]), total=len(frontal), desc="nlm images"):
+        p = src / ("CXR" + fn.replace(".dcm.png", ".png"))
+        if not p.exists():
+            continue
+        out = IMAGES_DIR / f"{uid}.png"
+        if not out.exists():
+            try:
+                _store(Image.open(p), out)
+            except Exception as e:  # noqa: BLE001
+                print("!! bad image", p.name, e)
+                continue
+        found[int(uid)] = str(out.relative_to(DATA_PROCESSED))
+    return found
+
+
 def extract_images() -> dict[int, str]:
-    """Reads every parquet shard present, saves the frontal image of each uid as PNG.
-    Returns {uid: relative path}. Shards that are missing/incomplete are skipped
-    (so the script can be re-run while the download is still in progress)."""
+    """Frontal image per uid, cached as PNG in IMAGES_DIR. Prefers the NLM 512px
+    download; falls back to the Hugging Face parquet shards if present.
+    Returns {uid: relative path}. Incomplete shards are skipped."""
     import pyarrow.parquet as pq
 
-    found: dict[int, str] = {}
+    found = extract_images_nlm()
+    if found:
+        print("frontal images from NLM:", len(found))
     shards = sorted(PARQUET_DIR.glob("*.parquet"))
     if not shards:
-        print("!! no parquet shards in", PARQUET_DIR, "- images skipped")
+        if not found:
+            print("!! no images found - run scripts/fetch_openi_images.py")
         return found
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     for shard in shards:
@@ -77,17 +114,13 @@ def extract_images() -> dict[int, str]:
             uids = batch.column("uid").to_pylist()
             imgs = batch.column("img_frontal").to_pylist()
             for uid, raw in zip(uids, imgs):
-                if raw is None:
+                if raw is None or int(uid) in found:
                     continue
                 out = IMAGES_DIR / f"{uid}.png"
                 if not out.exists():
-                    im = Image.open(io.BytesIO(raw)).convert("L")
+                    im = Image.open(io.BytesIO(raw))
                     im.thumbnail((IMG_STORE_SIZE * 2, IMG_STORE_SIZE * 2))
-                    w, h = im.size
-                    s = IMG_STORE_SIZE / min(w, h)
-                    im = im.resize((max(IMG_STORE_SIZE, round(w * s)), max(IMG_STORE_SIZE, round(h * s))),
-                                   Image.BILINEAR)
-                    im.save(out, optimize=True)
+                    _store(im, out)
                 found[int(uid)] = str(out.relative_to(DATA_PROCESSED))
     return found
 
