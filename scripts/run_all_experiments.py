@@ -53,8 +53,15 @@ def main() -> None:
     results["image"] = run(["-m", "medsupport.train.imaging", "image", "--epochs", ep], "baseline A: image only")
     results["clinical"] = run(["-m", "medsupport.train.imaging", "clinical", "--epochs", ep],
                               "baseline B: clinical only")
-    results["fusion"] = run(["-m", "medsupport.train.imaging", "fusion", "--epochs", ep,
-                             "--init-image", str(ROOT / "models" / "openi_image.pt")], "proposed: cross-modal fusion")
+    # Only warm-start the fusion image branch if baseline A actually produced a
+    # checkpoint; otherwise torch.load would raise and take the fusion run down too.
+    image_ck = ROOT / "models" / "openi_image.pt"
+    fusion_args = ["-m", "medsupport.train.imaging", "fusion", "--epochs", ep]
+    if image_ck.exists():
+        fusion_args += ["--init-image", str(image_ck)]
+    else:
+        print(f"\n[warn] {image_ck.name} missing - training fusion from ImageNet init instead", flush=True)
+    results["fusion"] = run(fusion_args, "proposed: cross-modal fusion")
     results["fusion_nopre"] = run(["-m", "medsupport.train.imaging", "fusion", "--epochs", ep, "--no-pretrain",
                                    "--tag", "_nopretrain"], "ablation: fusion without DDXPlus pre-training")
 

@@ -12,6 +12,8 @@ patient split, so their metrics are directly comparable
 from __future__ import annotations
 
 import argparse
+import os
+import sys
 import time
 
 import numpy as np
@@ -39,6 +41,13 @@ TRAIN_TF = T.Compose([
     T.Normalize(MEAN, STD),
 ])
 EVAL_TF = T.Compose([T.Resize(256), T.CenterCrop(IMG_SIZE), T.ToTensor(), T.Normalize(MEAN, STD)])
+
+# On Windows, DataLoader workers are *spawned*, so each one re-imports torch and
+# re-reserves commit charge for the CUDA DLLs. On a 16 GB laptop that exhausts the
+# pagefile and torch dies with "[WinError 1455] The paging file is too small"
+# before training starts. Loading batches in the main process avoids the extra
+# torch imports entirely; the GPU stays the bottleneck, so throughput is similar.
+DEFAULT_WORKERS = 0 if sys.platform == "win32" else 4
 
 
 class OpenIDataset(Dataset):
@@ -250,7 +259,9 @@ def main() -> None:
     ap.add_argument("--init-image", type=str, default=None, help="checkpoint of the image-only model to init fusion")
     ap.add_argument("--aux-weight", type=float, default=0.3)
     ap.add_argument("--tag", type=str, default="")
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--workers", type=int, default=DEFAULT_WORKERS,
+                    help="DataLoader worker processes (default 0 on Windows: spawned workers "
+                         "re-import torch and can exhaust the pagefile)")
     a = ap.parse_args()
     run(a.mode, a.epochs, a.bs, a.lr, a.lr_backbone, not a.no_pretrain, a.init_image, a.aux_weight, a.tag, a.workers)
 
