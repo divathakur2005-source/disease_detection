@@ -24,3 +24,9 @@ Thumbs.db
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Web demo
+web/node_modules/
+web/.next/
+web/.vercel
+web/next-env.d.ts
