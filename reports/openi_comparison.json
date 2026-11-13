@@ -1,0 +1,58 @@
+[
+  {
+    "model": "openi_image",
+    "auc_macro": 0.8263803006734745,
+    "f1_macro_tuned": 0.40690125125790844,
+    "f1_micro_tuned": 0.5142857142857142,
+    "auc_normal": 0.8186720997123681,
+    "auc_chest_infection": 0.8327437641723355,
+    "auc_cardiomegaly": 0.9222381635581062,
+    "auc_pleural_effusion": 0.8669871794871795,
+    "auc_opacity": 0.6560612702123515,
+    "auc_atelectasis": 0.7955692488262912,
+    "auc_emphysema_copd": 0.888394084336687,
+    "auc_edema_congestion": 0.8303765950824774
+  },
+  {
+    "model": "openi_fusion_nopretrain",
+    "auc_macro": 0.824969732155901,
+    "f1_macro_tuned": 0.40727283463615555,
+    "f1_micro_tuned": 0.5118733509234829,
+    "auc_normal": 0.7803711249600511,
+    "auc_chest_infection": 0.8333333333333333,
+    "auc_cardiomegaly": 0.9163558106169296,
+    "auc_pleural_effusion": 0.8608125942684767,
+    "auc_opacity": 0.6625146113383985,
+    "auc_atelectasis": 0.7752053990610328,
+    "auc_emphysema_copd": 0.8852328330309528,
+    "auc_edema_congestion": 0.885932150638033
+  },
+  {
+    "model": "openi_fusion",
+    "auc_macro": 0.8132704697626985,
+    "f1_macro_tuned": 0.3743608102643113,
+    "f1_micro_tuned": 0.49177489177489175,
+    "auc_normal": 0.798587807606264,
+    "auc_chest_infection": 0.8068934240362812,
+    "auc_cardiomegaly": 0.9074892395982783,
+    "auc_pleural_effusion": 0.8354072398190046,
+    "auc_opacity": 0.6206409507110852,
+    "auc_atelectasis": 0.8176643192488263,
+    "auc_emphysema_copd": 0.884435647919072,
+    "auc_edema_congestion": 0.8350451291627762
+  },
+  {
+    "model": "openi_clinical",
+    "auc_macro": 0.5808379921944582,
+    "f1_macro_tuned": 0.20890217955704685,
+    "f1_micro_tuned": 0.34712520150456744,
+    "auc_normal": 0.5884268136784916,
+    "auc_chest_infection": 0.5752834467120181,
+    "auc_cardiomegaly": 0.623299856527977,
+    "auc_pleural_effusion": 0.6582296380090498,
+    "auc_opacity": 0.5409848042080655,
+    "auc_atelectasis": 0.4939260563380281,
+    "auc_emphysema_copd": 0.5705371378305569,
+    "auc_edema_congestion": 0.5960161842514784
+  }
+]

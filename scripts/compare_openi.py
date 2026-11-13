@@ -24,16 +24,30 @@ def main() -> None:
     import matplotlib.pyplot as plt
     from sklearn.metrics import roc_auc_score, roc_curve
 
-    runs = {}
+    y = np.load(REPORTS_DIR / "openi_test_labels.npy")
+
+    # Only runs scored on the CURRENT test split are comparable. Stale artifacts
+    # from an earlier split (e.g. before the indication vocabulary was expanded)
+    # still match the glob, so skip any whose row count disagrees with the labels
+    # instead of letting a non-comparable AUC into the table.
+    runs, skipped = {}, []
     for p in sorted(REPORTS_DIR.glob("openi_*_metrics.json")):
         name = p.stem.replace("_metrics", "")
         probs = REPORTS_DIR / f"{name}_test_probs.npy"
-        if probs.exists():
-            runs[name] = {"metrics": json.load(open(p)), "probs": np.load(probs)}
+        if not probs.exists():
+            continue
+        pr = np.load(probs)
+        if pr.shape[0] != y.shape[0]:
+            skipped.append(f"{name} ({pr.shape[0]} rows vs {y.shape[0]} in current split)")
+            continue
+        runs[name] = {"metrics": json.load(open(p)), "probs": pr}
+    if skipped:
+        print("  [skipped stale run(s) from a different split]")
+        for s in skipped:
+            print(f"    - {s}")
     if not runs:
         print("no runs found")
         return
-    y = np.load(REPORTS_DIR / "openi_test_labels.npy")
 
     rows = []
     for name, r in runs.items():

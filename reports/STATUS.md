@@ -60,8 +60,8 @@ therefore built on a real signal, not an assumption.
 | **Rule-based triage engine** | ✅ Working | LOW / MODERATE / HIGH / EMERGENCY with written reasons |
 | **Streamlit demo application** | ✅ Built | Questionnaire + vitals + X-ray upload → predictions, Grad-CAM, triage |
 | **Automated tests** | ✅ 6/6 passing | Model shapes, attention masking, Grad-CAM, triage logic |
-| **Chest X-ray images download** | ⏳ In progress | Fetching 3,851 frontal radiographs from the official NLM Open-I API |
-| **Fusion model training** | ⏳ Blocked on images | Runs as soon as the download finishes |
+| **Chest X-ray images download** | ✅ Complete | Frontal radiographs fetched from the official NLM Open-I API; 3,105 usable paired cases (train 2,173 / val 466 / test 466) |
+| **Open-I model training** | ⏳ Running | Image-only, clinical-only, fusion and the no-pretrain ablation, all on the same split |
 
 ### Per-disease performance of the symptom model (held-out test set)
 
@@ -120,7 +120,7 @@ vocabulary contributes.
 
 ## 6. Immediate next steps
 
-1. Finish downloading the 3,851 frontal chest radiographs (official NLM source)
+1. ~~Finish downloading the frontal chest radiographs (official NLM source)~~ — done
 2. Train the three Open-I models and the ablation
 3. Generate the comparison table, ROC curves and Grad-CAM examples
 4. Update the presentation with the results — slides 11, 16, 19 and the

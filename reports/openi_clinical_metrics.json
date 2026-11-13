@@ -1,0 +1,143 @@
+{
+  "mode": "clinical",
+  "tag": "",
+  "pretrain": true,
+  "init_image": null,
+  "epochs_run": 20,
+  "best_val_auc_macro": 0.644128781590267,
+  "train_seconds": 10.6,
+  "test_at_0.5": {
+    "threshold": 0.5,
+    "n": 466,
+    "exact_match_accuracy": 0.19098712446351931,
+    "f1_macro": 0.18123554721501411,
+    "f1_micro": 0.28901734104046245,
+    "auc_macro": 0.5808379921944582,
+    "per_label": {
+      "normal": {
+        "support": 168,
+        "precision": 0.40963855421686746,
+        "recall": 0.6071428571428571,
+        "f1": 0.4892086330935252,
+        "auc": 0.5884268136784916
+      },
+      "chest_infection": {
+        "support": 25,
+        "precision": 0.08695652173913043,
+        "recall": 0.24,
+        "f1": 0.1276595744680851,
+        "auc": 0.5752834467120181
+      },
+      "cardiomegaly": {
+        "support": 41,
+        "precision": 0.14788732394366197,
+        "recall": 0.5121951219512195,
+        "f1": 0.22950819672131148,
+        "auc": 0.623299856527977
+      },
+      "pleural_effusion": {
+        "support": 24,
+        "precision": 0.058823529411764705,
+        "recall": 0.041666666666666664,
+        "f1": 0.04878048780487805,
+        "auc": 0.6582296380090498
+      },
+      "opacity": {
+        "support": 118,
+        "precision": 0.24757281553398058,
+        "recall": 0.4322033898305085,
+        "f1": 0.3148148148148148,
+        "auc": 0.5409848042080655
+      },
+      "atelectasis": {
+        "support": 40,
+        "precision": 0.0873015873015873,
+        "recall": 0.275,
+        "f1": 0.13253012048192772,
+        "auc": 0.4939260563380281
+      },
+      "emphysema_copd": {
+        "support": 43,
+        "precision": 0.07547169811320754,
+        "recall": 0.18604651162790697,
+        "f1": 0.10738255033557047,
+        "auc": 0.5705371378305569
+      },
+      "edema_congestion": {
+        "support": 7,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "auc": 0.5960161842514784
+      }
+    }
+  },
+  "test_tuned": {
+    "f1_macro": 0.20890217955704685,
+    "f1_micro": 0.34712520150456744,
+    "per_label": {
+      "normal": {
+        "precision": 0.3973684210526316,
+        "recall": 0.8988095238095238,
+        "f1": 0.551094890510949,
+        "threshold": 0.39999999999999997
+      },
+      "chest_infection": {
+        "precision": 0.08695652173913043,
+        "recall": 0.24,
+        "f1": 0.1276595744680851,
+        "threshold": 0.49999999999999994
+      },
+      "cardiomegaly": {
+        "precision": 0.1368421052631579,
+        "recall": 0.6341463414634146,
+        "f1": 0.22510822510822512,
+        "threshold": 0.44999999999999996
+      },
+      "pleural_effusion": {
+        "precision": 0.09230769230769231,
+        "recall": 0.5,
+        "f1": 0.15584415584415584,
+        "threshold": 0.35
+      },
+      "opacity": {
+        "precision": 0.25442477876106195,
+        "recall": 0.9745762711864406,
+        "f1": 0.40350877192982454,
+        "threshold": 0.35
+      },
+      "atelectasis": {
+        "precision": 0.0873015873015873,
+        "recall": 0.275,
+        "f1": 0.13253012048192772,
+        "threshold": 0.49999999999999994
+      },
+      "emphysema_copd": {
+        "precision": 0.2,
+        "recall": 0.046511627906976744,
+        "f1": 0.07547169811320754,
+        "threshold": 0.65
+      },
+      "edema_congestion": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "threshold": 0.39999999999999997
+      }
+    }
+  },
+  "thresholds": {
+    "normal": 0.39999999999999997,
+    "chest_infection": 0.49999999999999994,
+    "cardiomegaly": 0.44999999999999996,
+    "pleural_effusion": 0.35,
+    "opacity": 0.35,
+    "atelectasis": 0.49999999999999994,
+    "emphysema_copd": 0.65,
+    "edema_congestion": 0.39999999999999997
+  },
+  "lr": 0.0003,
+  "lr_backbone": 0.0001,
+  "batch_size": 32,
+  "aux_weight": 0.3
+}
