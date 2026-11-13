@@ -70,24 +70,55 @@ class OpenIDataset(Dataset):
         return img, torch.from_numpy(self.sym[i]), torch.from_numpy(self.y[i])
 
 
-def build_model(mode: str, vocab_size: int, n_labels: int, pretrain: bool, init_image: str | None):
+def _load_pretrained_encoder(module, vocab: list[str]) -> None:
+    """Load the DDXPlus-pretrained SymptomEncoder into `module`, aligning by symptom name.
+
+    The encoder was pre-trained on an older, smaller indication vocabulary (231
+    symptoms); the Open-I vocabulary has since grown to 233 and its order differs.
+    Padding the tensors would silently pair pretrained weights with the wrong
+    symptom, so we remap row-by-row via the `features` list stored in the
+    checkpoint. Symptoms the encoder never saw keep their fresh initialisation.
+    """
+    ck = torch.load(MODELS_DIR / "symptom_encoder.pt", map_location="cpu", weights_only=False)
+    enc = {k[len("encoder."):]: v for k, v in ck["state_dict"].items() if k.startswith("encoder.")}
+    old = list(ck.get("features") or [])
+
+    if old and old != vocab:
+        idx = {name: i for i, name in enumerate(old)}
+        keep = [(j, idx[name]) for j, name in enumerate(vocab) if name in idx]
+        tgt = module.state_dict()
+        for key, dim in (("symptom_emb.weight", 0), ("mlp.0.weight", 1)):
+            if key not in enc or key not in tgt:
+                continue
+            w = tgt[key].clone()
+            src = enc[key]
+            for j, i in keep:
+                if dim == 0:
+                    w[j] = src[i]
+                else:
+                    w[:, j] = src[:, i]
+            enc[key] = w
+        missing = [n for n in vocab if n not in idx]
+        print(f"  remapped pretrained encoder {len(old)} -> {len(vocab)} symptoms "
+              f"({len(keep)} transferred, {len(missing)} new: {', '.join(missing) or 'none'})")
+
+    module.load_state_dict(enc)
+    print("  loaded DDXPlus-pretrained SymptomEncoder")
+
+
+def build_model(mode: str, vocab: list[str], n_labels: int, pretrain: bool, init_image: str | None):
+    vocab_size = len(vocab)
     if mode == "image":
         return ImageEncoder(n_classes=n_labels, pretrained=True)
     if mode == "clinical":
         m = SymptomEncoderClassifier(vocab_size, n_labels, dim=256, dropout=0.3)
         if pretrain:
-            ck = torch.load(MODELS_DIR / "symptom_encoder.pt", map_location="cpu", weights_only=False)
-            enc = {k[len("encoder."):]: v for k, v in ck["state_dict"].items() if k.startswith("encoder.")}
-            m.encoder.load_state_dict(enc)
-            print("  loaded DDXPlus-pretrained SymptomEncoder")
+            _load_pretrained_encoder(m.encoder, vocab)
         return m
     if mode == "fusion":
         m = CrossModalFusionNet(vocab_size, n_labels, dim=256, pretrained=True, freeze_until=None)
         if pretrain:
-            ck = torch.load(MODELS_DIR / "symptom_encoder.pt", map_location="cpu", weights_only=False)
-            enc = {k[len("encoder."):]: v for k, v in ck["state_dict"].items() if k.startswith("encoder.")}
-            m.clinical.load_state_dict(enc)
-            print("  loaded DDXPlus-pretrained SymptomEncoder")
+            _load_pretrained_encoder(m.clinical, vocab)
         if init_image:
             ck = torch.load(init_image, map_location="cpu", weights_only=False)
             feat = {k[len("features."):]: v for k, v in ck["state_dict"].items() if k.startswith("features.")}
@@ -140,7 +171,7 @@ def run(mode: str, epochs: int, bs: int, lr: float, lr_backbone: float, pretrain
     print(f"[{name}] train {len(parts['train'])} val {len(parts['val'])} test {len(parts['test'])} "
           f"labels {n_labels} vocab {len(vocab)} device {dev}")
 
-    model = build_model(mode, len(vocab), n_labels, pretrain, init_image).to(dev)
+    model = build_model(mode, vocab, n_labels, pretrain, init_image).to(dev)
 
     # class imbalance: pos_weight = neg/pos per label, capped
     ytr = parts["train"][[f"y_{n}" for n in THORACIC_LABEL_NAMES]].to_numpy()
