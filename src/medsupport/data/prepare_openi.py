@@ -24,7 +24,8 @@ from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
 from medsupport.config import (DATA_PROCESSED, DATA_RAW, EXTRA_EVIDENCES, IMAGES_DIR, IMG_STORE_SIZE,
-                               INDICATION_TO_EVIDENCE, SEED, THORACIC_LABELS)
+                               INDICATION_TO_EVIDENCE, PAIN_FALLBACK_CODE, PAIN_FALLBACK_PATTERN,
+                               PAIN_SPECIFIC_CODES, SEED, THORACIC_LABELS)
 from medsupport.utils import load_json, save_json
 
 REPORTS = DATA_RAW / "openi_meta" / "indiana_reports.csv"
@@ -46,6 +47,11 @@ def parse_indication(text: str, vocab_index: dict[str, int]) -> np.ndarray:
     # "female" also matches "male" patterns via \bmale\b? No - but "woman"/"man": guard explicitly.
     if v[vocab_index["X_FEMALE"]] and re.search(r"female|woman|\bshe\b|\bher\b", t) and not re.search(r"\bmale\b|\bman\b|\bhe\b|\bhis\b", t):
         v[vocab_index["X_MALE"]] = 0
+    # Generic-pain fallback: only when the text mentions pain but no specific
+    # site matched, so E_53 captures de-identified "XXXX pain" without becoming
+    # a near-ubiquitous duplicate of the site-specific pain codes.
+    if re.search(PAIN_FALLBACK_PATTERN, t) and not any(v[vocab_index[c]] for c in PAIN_SPECIFIC_CODES):
+        v[vocab_index[PAIN_FALLBACK_CODE]] = 1
     return v
 
 

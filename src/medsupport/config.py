@@ -135,4 +135,34 @@ INDICATION_TO_EVIDENCE: list[tuple[str, list[str]]] = [
     (r"\bline\b|catheter|pacemaker|\bpicc\b|port\b|\btube\b|placement|\bicd\b|defibrillator", ["X_DEVICE"]),
     (r"female|woman|\bshe\b|\bher\b",                            ["X_FEMALE"]),
     (r"\bmale\b|\bman\b|\bhe\b|\bhis\b",                         ["X_MALE"]),
+    # --- Gap-closing rules -------------------------------------------------
+    # Added after auditing the 296 indications that parsed to an empty symptom
+    # vector despite containing real clinical words (see
+    # reports/clinical_signal_analysis.md). Each pattern below was taken from
+    # text actually present in the corpus, not invented.
+    #
+    # Open-I de-identification frequently removes the body part but leaves the
+    # symptom ("XXXX pain", "XXXX loss"), so these catch the generic residue
+    # that the body-part-specific rules above require a site for.
+    (r"\brales\b|crackles|abnormal (lung|breath) sounds|\brhonchi\b", ["E_66"]),
+    (r"elevated blood pressure|\bhigh bp\b|\bbp elevated\b",     ["E_104"]),
+    (r"syncopal",                                                ["E_159"]),
+    (r"\bnodule",                                                ["X_RULE_OUT", "E_34"]),
+    (r"upper\s+\S*\s*(tract )?infection|\buri symptoms\b",       ["E_0"]),
+    (r"throat pain|odynophagia|choking",                         ["E_97"]),
+    (r"chronic airway obstruction|airway obstruction",           ["E_123"]),
+    (r"headache|bodyache|body ache",                             ["E_175"]),
+    # "XXXX loss" is overwhelmingly weight loss in this corpus
+    (r"\b(weight|xxxx) loss\b",                                  ["E_162"]),
+    (r"thoracic pain|chest wall|sided chest",                    ["E_14"]),
 ]
+
+# Bare or de-identified pain ("XXXX pain", "PAIN;...FWC") with no recoverable
+# site. DDXPlus E_53 is exactly "pain somewhere, related to your reason for
+# consulting", but applying it to every mention of pain would tag ~31% of
+# patients — it would become the most frequent feature in the corpus while
+# merely duplicating the specific pain codes. So it is a *fallback*: it fires
+# only when no site-specific pain code (chest, pleuritic, or elsewhere) matched.
+PAIN_FALLBACK_PATTERN = r"\bpain\b|\bpainful\b"
+PAIN_SPECIFIC_CODES = ("E_14", "E_220", "X_PAIN_OTHER", "E_97")
+PAIN_FALLBACK_CODE = "E_53"
