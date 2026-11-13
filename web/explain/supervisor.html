@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-Based Medical Decision-Support System — Progress Report (Group RG24)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --ink:#15181d; --mute:#5a6472; --dim:#8b95a3;
+    --line:#dfe4ea; --soft:#f5f7f9; --soft2:#eef2f6;
+    --accent:#1b4f9c; --good:#1d7a4f; --bad:#a8322f; --warn:#8a6100;
+    --serif:'Source Serif 4',Georgia,serif;
+    --sans:Inter,system-ui,-apple-system,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+    font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px 80px}
+
+  header{padding:52px 0 22px;border-bottom:2px solid var(--ink);margin-bottom:30px}
+  .inst{font-family:var(--sans);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--accent);font-weight:600}
+  h1{font-family:var(--serif);font-size:clamp(26px,4.4vw,35px);line-height:1.2;
+    margin:12px 0 6px;font-weight:700;letter-spacing:-.015em}
+  .subt{font-size:18px;color:var(--mute);font-style:italic;margin-bottom:18px}
+  .idblock{font-family:var(--sans);font-size:13.5px;color:var(--mute);line-height:1.9}
+  .idblock b{color:var(--ink);font-weight:600}
+
+  h2{font-family:var(--sans);font-size:14px;letter-spacing:.09em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin:44px 0 10px;
+    padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-family:var(--sans);font-size:16px;font-weight:600;margin:26px 0 6px}
+  p{margin:12px 0}
+  .lead{font-size:18.5px;color:#2c333c}
+  ul,ol{padding-left:24px}
+  li{margin:7px 0}
+  a{color:var(--accent)}
+
+  .abstract{background:var(--soft);border-left:3px solid var(--accent);
+    padding:18px 22px;margin:22px 0;font-size:16.5px}
+  .abstract p:first-child{margin-top:0} .abstract p:last-child{margin-bottom:0}
+
+  table{width:100%;border-collapse:collapse;margin:20px 0;font-family:var(--sans);font-size:14px}
+  caption{caption-side:top;font-family:var(--sans);font-size:13px;color:var(--mute);
+    text-align:left;padding-bottom:9px;font-style:normal}
+  caption b{color:var(--ink)}
+  th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left}
+  thead th{background:var(--soft2);font-size:11.5px;text-transform:uppercase;
+    letter-spacing:.06em;color:var(--mute);font-weight:600;border-bottom:1.5px solid var(--line)}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-size:13px}
+  tr.best td{background:#f0f6ff;font-weight:600}
+  tbody tr:last-child td{border-bottom:1.5px solid var(--line)}
+  .tw{overflow-x:auto}
+
+  code{font-family:var(--mono);font-size:13px;background:var(--soft);
+    padding:1.5px 5px;border-radius:3px;border:1px solid var(--line)}
+  pre{font-family:var(--mono);font-size:12.5px;line-height:1.6;background:var(--soft);
+    border:1px solid var(--line);border-left:3px solid var(--dim);
+    padding:13px 15px;overflow-x:auto;border-radius:0 4px 4px 0}
+
+  .fig{background:var(--soft);border:1px solid var(--line);padding:18px;margin:22px 0;
+    font-family:var(--mono);font-size:12px;line-height:1.75;white-space:pre;overflow-x:auto}
+  .note{border-left:3px solid var(--warn);background:#fdfaf2;padding:15px 19px;margin:20px 0;font-size:16px}
+  .note b{color:var(--warn)}
+  .finding{border-left:3px solid var(--good);background:#f3faf6;padding:15px 19px;margin:20px 0;font-size:16px}
+  .finding b{color:var(--good)}
+  .limit{border-left:3px solid var(--bad);background:#fdf5f4;padding:15px 19px;margin:20px 0;font-size:16px}
+  .limit b{color:var(--bad)}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+  @media(max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .kpi{border:1px solid var(--line);padding:13px 15px;background:var(--soft)}
+  .kpi .v{font-family:var(--mono);font-size:21px;font-weight:400;letter-spacing:-.01em}
+  .kpi .l{font-family:var(--sans);font-size:11.5px;color:var(--mute);margin-top:3px;line-height:1.4}
+
+  footer{margin-top:54px;padding-top:20px;border-top:1px solid var(--line);
+    font-family:var(--sans);font-size:12.5px;color:var(--dim);line-height:1.75}
+  .pend{color:var(--warn);font-style:italic}
+  .sig{display:flex;gap:40px;margin-top:34px;font-family:var(--sans);font-size:13px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="inst">Jaypee University of Information Technology · CSE &amp; IT</div>
+  <h1>AI-Based Medical Decision-Support System</h1>
+  <p class="subt">Cross-modal fusion of clinical symptoms and chest radiographs
+  through a shared diagnostic vocabulary</p>
+  <div class="idblock">
+    <b>Group:</b> RG24 &nbsp;·&nbsp; <b>Course:</b> Major Project-I (18B19CI791)<br>
+    <b>Supervisor:</b> Dr. Hari Singh<br>
+    <b>Report date:</b> 13 November 2026 &nbsp;·&nbsp; <b>Status:</b> Experimental evaluation complete
+  </div>
+</header>
+
+<div class="abstract">
+  <p><b>Summary.</b> The three proposed datasets contained no overlapping patients, so
+  multimodal fusion had no paired data to learn from. We resolved this by identifying the
+  symptom dataset as <b>DDXPlus</b> (610,000 patients, 223 standardised clinical questions)
+  and parsing the free-text <i>indication</i> field of each Open-I chest X-ray report into
+  that same 223-code vocabulary, yielding <b>3,459 genuinely paired patients</b>.</p>
+  <p>Four models were trained on an identical patient split and evaluated on eight thoracic
+  findings. Cross-modal fusion attains <b>macro AUC 0.842</b> against <b>0.822</b> for the
+  image-only baseline and <b>0.622</b> for the clinical-only baseline, ranking first on four
+  of the eight findings: the central hypothesis is supported. Unexpectedly, the best fusion
+  configuration is the one <b>without</b> DDXPlus pre-training; transferring the pre-trained
+  encoder weights reduced performance to 0.808. We attribute this to a measured distribution
+  mismatch — DDXPlus questionnaires are dense, whereas Open-I indications yield a mean of
+  1.35 symptoms per patient, with 8.3% irrecoverably de-identified at source. Both the
+  positive result and this limitation are reported in full.</p>
+</div>
+
+<h2>1. Problem addressed</h2>
+<p class="lead">The project's central premise — that symptoms and radiographs can be fused
+to improve diagnosis — required paired data that the proposed datasets did not provide.</p>
+<p>The symptom questionnaire, chest X-ray, and diabetes datasets originate from three
+disjoint patient populations. No patient appears in more than one. Consequently, symptom
+features showed no correlation with radiographic findings: there was no mechanism linking
+any patient's reported symptoms to their radiograph, and the fusion architecture had
+nothing to fuse. This was a data-pairing problem, not a modelling deficiency.</p>
+
+<h2>2. Method: a shared clinical vocabulary</h2>
+<h3>2.1 Dataset identification</h3>
+<p>The symptom dataset was identified as the <b>DDXPlus</b> research corpus rather than the
+41-disease dataset originally assumed: 610,000 patients, <b>223 standardised binary clinical
+questions</b> (symptoms and medical history), and <b>49 diagnoses</b>, including Pneumonia,
+Bronchitis, URTI, Influenza, Tuberculosis and COPD exacerbation.</p>
+
+<h3>2.2 Recovering the cross-modal link</h3>
+<p>Each Open-I radiology report contains an <b>indication</b> field — the referring
+physician's stated reason for the examination, in free text:</p>
+<pre>"68-year-old with shortness of breath and weakness. Hypertension. Diabetes."</pre>
+<p>We parse this text into the same 223 DDXPlus question codes using a curated rule set.
+Every radiograph therefore acquires a symptom vector belonging to <i>the same patient</i>,
+producing the paired multimodal data the project requires. Because both modalities share one
+vocabulary, a symptom encoder pre-trained on 610,000 DDXPlus patients can be transferred to
+the much smaller Open-I corpus — the principal technical contribution of this work.</p>
+
+<h2>3. System architecture</h2>
+<div class="fig"> Symptoms (223 standard questions)        Chest radiograph (frontal)
+              │                                      │
+    SymptomEncoder (pre-trained              DenseNet-121
+     on 610k DDXPlus patients)            (ImageNet init, 7×7×1024)
+              │                                      │
+              └──► bidirectional cross-modal attention ◄──┘
+                                  │
+                   8 thoracic findings (multi-label):
+            normal · chest infection · cardiomegaly · pleural effusion
+            opacity · atelectasis · emphysema/COPD · pulmonary edema
+                                  │
+   Vitals ──► Diabetes model ──► TRIAGE ENGINE ──► Grad-CAM explanation
+                                  │
+              LOW / MODERATE / HIGH / EMERGENCY + referral</div>
+<p>The triage engine encodes the comorbidity interaction that motivated the project: a
+suspected chest infection in a patient with elevated diabetes risk is escalated above either
+finding in isolation, since impaired immune response worsens pneumonia outcomes.</p>
+
+<h2>4. Experimental design</h2>
+<p>Four models were trained on an identical patient-level split
+(<b>2,421 train / 519 validation / 519 test</b>), stratified on the chest-infection label, so
+that all comparisons are direct:</p>
+<ul>
+  <li><b>Baseline A — image only:</b> DenseNet-121 on the radiograph alone.</li>
+  <li><b>Baseline B — clinical only:</b> SymptomEncoder on the parsed symptom vector alone.</li>
+  <li><b>Proposed — cross-modal fusion:</b> both modalities with bidirectional attention.</li>
+  <li><b>Ablation — fusion without DDXPlus pre-training:</b> isolates the contribution of the
+  shared vocabulary.</li>
+</ul>
+
+<h2>5. Results</h2>
+<div class="tw">
+<table>
+  <caption><b>Table 1.</b> Macro-averaged performance over the eight thoracic findings,
+  held-out test set (n = 519). All models share one patient split.</caption>
+  <thead><tr><th>Model</th><th class="num">Macro AUC</th><th class="num">F1 (tuned)</th></tr></thead>
+  <tbody>
+    <tr class="best"><td>Fusion <i>without</i> DDXPlus pre-training</td><td class="num">0.8416</td><td class="num">0.410</td></tr>
+    <tr><td>Baseline A — image only (DenseNet-121)</td><td class="num">0.8216</td><td class="num">0.430</td></tr>
+    <tr><td>Fusion <i>with</i> DDXPlus pre-training</td><td class="num">0.8084</td><td class="num">0.415</td></tr>
+    <tr><td>Baseline B — clinical only</td><td class="num">0.6221</td><td class="num">0.215</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="finding">
+  <p><b>Principal result.</b> The cross-modal fusion model attains <b>macro AUC 0.8416</b>
+  against <b>0.8216</b> for the image-only baseline (<b>+0.020</b>) and <b>0.6221</b> for the
+  clinical-only baseline. Fusion ranks first on <b>four of the eight findings</b>. The
+  project's central hypothesis — that combining symptoms with the radiograph improves
+  prediction over either modality alone — is therefore supported on this corpus.</p>
+</div>
+
+<div class="note">
+  <p><b>An unexpected finding, reported in full.</b> The best fusion configuration is the one
+  <i>without</i> DDXPlus pre-training. Transferring the pre-trained encoder weights
+  <i>reduced</i> performance to 0.8084 — below even the image-only baseline. The probable cause
+  is a distribution mismatch: the encoder was pre-trained on DDXPlus questionnaires, in which
+  each patient has many recorded symptoms, whereas the Open-I indications yield a mean of 1.35.
+  A representation optimised for dense input carries an unhelpful prior on sparse input.</p>
+  <p>The shared vocabulary itself remains necessary — without it no paired dataset exists and
+  no fusion model could be trained. It is specifically the <i>weight transfer</i> that did not
+  help here. This distinction was detected only because the ablation was run, which is its
+  purpose.</p>
+</div>
+
+<h3>5.1 Per-finding results</h3>
+<div class="tw">
+<table>
+  <caption><b>Table 1b.</b> Per-finding AUC. Best value per row in bold.</caption>
+  <thead><tr><th>Finding</th><th class="num">Test cases</th><th class="num">Image</th>
+    <th class="num">Fusion (no pre-train)</th><th class="num">Fusion (pre-train)</th><th class="num">Clinical</th></tr></thead>
+  <tbody>
+    <tr><td>normal</td><td class="num">188</td><td class="num"><b>0.812</b></td><td class="num">0.797</td><td class="num">0.781</td><td class="num">0.610</td></tr>
+    <tr><td>chest infection</td><td class="num">27</td><td class="num">0.765</td><td class="num"><b>0.852</b></td><td class="num">0.753</td><td class="num">0.629</td></tr>
+    <tr><td>cardiomegaly</td><td class="num">48</td><td class="num"><b>0.912</b></td><td class="num">0.900</td><td class="num">0.906</td><td class="num">0.700</td></tr>
+    <tr><td>pleural effusion</td><td class="num">27</td><td class="num">0.832</td><td class="num">0.816</td><td class="num"><b>0.867</b></td><td class="num">0.559</td></tr>
+    <tr><td>opacity</td><td class="num">133</td><td class="num">0.613</td><td class="num"><b>0.658</b></td><td class="num">0.640</td><td class="num">0.528</td></tr>
+    <tr><td>atelectasis</td><td class="num">40</td><td class="num">0.836</td><td class="num"><b>0.891</b></td><td class="num">0.775</td><td class="num">0.572</td></tr>
+    <tr><td>emphysema / COPD</td><td class="num">36</td><td class="num">0.892</td><td class="num"><b>0.914</b></td><td class="num">0.843</td><td class="num">0.637</td></tr>
+    <tr><td>pulmonary edema</td><td class="num">17</td><td class="num"><b>0.910</b></td><td class="num">0.905</td><td class="num">0.901</td><td class="num">0.743</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Fusion's largest gains are on <b>chest infection</b> (+0.087) and <b>atelectasis</b>
+(+0.055) — findings for which infection and breathing symptoms in the referral text are
+genuinely informative. The image-only model remains stronger on <i>normal</i> and
+<i>cardiomegaly</i>, which are largely determined by radiographic appearance.</p>
+
+<h2>6. Why the margin is small, and why pre-training did not help</h2>
+<p class="lead">Both observations follow from a single measured property of the paired data:
+the clinical modality is extremely sparse.</p>
+
+<p>We instrumented the clinical branch's input across all 3,459 paired patients:</p>
+<div class="kpis">
+  <div class="kpi"><div class="v">53 / 233</div><div class="l">vocabulary columns ever active</div></div>
+  <div class="kpi"><div class="v">1.35</div><div class="l">mean symptoms per patient</div></div>
+  <div class="kpi"><div class="v">15.2%</div><div class="l">patients with an empty symptom vector</div></div>
+  <div class="kpi"><div class="v">8.3%</div><div class="l">irrecoverably de-identified</div></div>
+</div>
+
+<h3>6.1 Source-level de-identification</h3>
+<p>The Open-I corpus was de-identified before publication, with clinical terms replaced by
+the token <code>XXXX</code>. A substantial fraction of indications therefore carry no
+recoverable content — for example <code>"XXXX-year-old XXXX with XXXX."</code> No parser
+improvement can recover these; we quantify them at <b>8.3% of all patients</b> (67 blank,
+191 fully redacted).</p>
+
+<h3>6.2 The available features are the least diagnostic</h3>
+<table>
+  <caption><b>Table 2.</b> Most frequent parsed features across 3,459 paired patients.</caption>
+  <thead><tr><th>Feature</th><th>Meaning</th><th class="num">Prevalence</th></tr></thead>
+  <tbody>
+    <tr><td><code>E_14</code></td><td>Chest pain</td><td class="num">24.1%</td></tr>
+    <tr><td><code>X_FEMALE</code></td><td>Female patient</td><td class="num">17.6%</td></tr>
+    <tr><td><code>E_66</code></td><td>Dyspnoea / abnormal breath sounds</td><td class="num">17.4%</td></tr>
+    <tr><td><code>X_MALE</code></td><td>Male patient</td><td class="num">12.1%</td></tr>
+    <tr><td><code>X_TB_SCREEN</code></td><td>Tuberculosis screening</td><td class="num">2.7%</td></tr>
+  </tbody>
+</table>
+<p>Two of the four most frequent features are <b>patient sex</b>, which carries almost no
+information about thoracic findings. The clinically informative features appear in fewer than
+4% of patients each. The branch's most <i>available</i> signal is thus its least
+<i>diagnostic</i>. This bounds the clinical baseline at AUC 0.622 and explains why fusion's
+advantage over the image branch, while consistent, is modest (+0.020): the second modality
+is thin. It also explains the pre-training result — an encoder fitted to dense DDXPlus
+questionnaires transfers a prior that does not hold at 1.35 symptoms per patient.</p>
+
+<h3>6.3 Reconciliation with the earlier lift analysis</h3>
+<div class="note">
+  <p><b>This does not contradict the reported symptom–finding lifts.</b> The lift figures
+  (e.g. hypoxia → chest infection, 5.2×) are computed on the subsets where each symptom is
+  <i>present</i> — 33 patients for hypoxia, 30 for heart disease. A feature may be strongly
+  predictive when present while remaining uninformative to a classifier that observes it in
+  roughly 1% of cases. Both measurements are correct; they answer different questions.</p>
+</div>
+
+<h3>6.4 Parser improvement and its measured ceiling</h3>
+<p>We audited the 296 indications that parsed to an empty vector despite containing clinical
+words, and extended the rule set accordingly (rales/crackles, elevated blood pressure,
+syncopal episode, pulmonary nodule, upper respiratory tract infection, throat pain, chronic
+airway obstruction, headache, weight loss).</p>
+<p>A design decision is worth recording: DDXPlus <code>E_53</code> ("pain somewhere, related
+to your reason for consulting") matches the 52 cases of site-less or redacted pain, but
+applying it to every mention of pain tagged 30.9% of patients, making it the corpus's most
+frequent feature while duplicating the site-specific pain codes. It was therefore implemented
+as a <b>fallback</b>, firing only where no specific pain site matched (final prevalence 4.1%).</p>
+<div class="finding">
+  <p><b>Measured effect.</b> 87 of 296 cases recovered; symptom density 1.28 → <b>1.35</b> per
+  patient; empty vectors 17.8% → <b>15.2%</b>; paired patients 3,105 → <b>3,459</b> (+11%).
+  Baseline B improved from AUC 0.581 to <b>0.622</b>. The improvement is real but bounded:
+  it does not close the gap to the image branch, consistent with the sparsity analysis above.</p>
+</div>
+
+<h2>7. Engineering issues resolved</h2>
+<p>Three defects were identified and corrected during experimentation; two would have
+produced silently invalid results.</p>
+<table>
+  <caption><b>Table 3.</b> Defects found, with consequence if left uncorrected.</caption>
+  <thead><tr><th>Defect</th><th>Cause</th><th>Consequence if unfixed</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>Training aborted before the first epoch (<code>WinError 1455</code>)</td>
+      <td>Windows spawns DataLoader workers; each re-imports PyTorch and reserves CUDA memory, exhausting the commit limit</td>
+      <td>No models trainable on the available hardware</td>
+    </tr>
+    <tr>
+      <td>Pre-trained encoder failed to load (231 vs 233 symptoms)</td>
+      <td>The vocabulary was expanded after the encoder was pre-trained, and the ordering changed</td>
+      <td><b>Silent corruption:</b> padding the tensors would have paired pre-trained weights with the wrong symptoms, invalidating the shared-vocabulary claim while still producing plausible metrics</td>
+    </tr>
+    <tr>
+      <td>Comparison table included a non-comparable run</td>
+      <td>All metrics files were aggregated regardless of which data split produced them</td>
+      <td>A stale 578-sample run (AUC 0.626) reported alongside current 519-sample results</td>
+    </tr>
+  </tbody>
+</table>
+<p>The encoder fix remaps weights by symptom <i>name</i> using the feature list stored in the
+checkpoint; all 231 shared symptoms were verified to transfer to their correct index, with the
+two new codes retaining fresh initialisation.</p>
+
+<h2>8. Limitations</h2>
+<div class="limit">
+  <ul style="margin:0">
+    <li><b>Test set size and statistical confidence.</b> 519 patients. Rare findings are
+    sparsely represented (pulmonary edema: 17 cases; chest infection: 27), so per-class figures
+    for these labels are noisy. The reported +0.020 macro-AUC advantage is from a single split
+    and has not been subjected to a significance test; it should be read as a consistent trend
+    across four of eight findings rather than as an established effect size.</li>
+    <li><b>DDXPlus is synthetic.</b> The 99.34% symptom-model accuracy reflects a dataset
+    generated from a clinical knowledge base; it demonstrates pipeline correctness, not
+    clinical performance. The honest evaluation is the Open-I result.</li>
+    <li><b>Indication text is a proxy.</b> It records the referring physician's stated reason
+    for the examination, which is not a complete symptom history and is written by a clinician
+    who already suspected a particular finding.</li>
+    <li><b>Not clinically validated.</b> This is a research prototype for decision
+    <i>support</i>. It is not a diagnostic device and requires qualified medical review.</li>
+  </ul>
+</div>
+
+<h2>9. Conclusions and proposed next steps</h2>
+<p>The shared-vocabulary method successfully produced paired multimodal data from datasets
+that previously had no patient overlap, and the full pipeline — symptom model, diabetes model,
+fusion architecture, Grad-CAM explainability, triage engine and demonstration application —
+is implemented and verified. On this corpus, cross-modal fusion improves on the image-only
+baseline (macro AUC 0.842 vs 0.822, best on four of eight findings), supporting the project's
+central hypothesis. The gain is modest, and transferring pre-trained encoder weights proved
+counter-productive; both observations are attributable to quantified sparsity in the paired
+symptom signal.</p>
+<ol>
+  <li><b>Evaluate on MIMIC-CXR</b>, which pairs full radiology reports with structured
+  clinical data under less aggressive de-identification. This is the highest-value next step.</li>
+  <li><b>Restrict fusion to cardiac findings</b>, where the clinical branch carries genuine
+  signal (cardiomegaly AUC 0.700; pulmonary edema 0.743) as opposed to parenchymal findings
+  (opacity 0.528). This is clinically coherent: a referral citing heart failure describes a
+  cardiac syndrome, whereas opacity has no distinctive presenting symptom.</li>
+  <li><b>Revise the pre-training strategy.</b> Direct weight transfer reduced performance.
+  Two principled alternatives: fine-tune the encoder on Open-I's sparsity rather than freezing
+  the transferred prior, or pre-train on artificially sparsified DDXPlus samples so that the
+  source distribution matches the target.</li>
+  <li><b>Establish statistical confidence.</b> The +0.020 margin is measured on a single
+  split. Repeating all four models across multiple seeds and reporting mean ± standard
+  deviation, with a DeLong test on the paired AUCs, would substantiate the claim at low cost.
+  We regard this as the most important immediate step.</li>
+  <li><b>Regularise the fusion model.</b> The pre-trained variant early-stopped at epoch 10,
+  indicating overfitting with 2,421 training cases against 9M parameters; freezing the image
+  backbone and tuning the auxiliary loss weight are the natural interventions.</li>
+</ol>
+
+<div class="sig">
+  <div><b>Prepared by:</b> Group RG24</div>
+  <div><b>For review by:</b> Dr. Hari Singh</div>
+</div>
+
+<footer>
+  <p>Research prototype for an academic project. This system provides clinical decision
+  <b>support</b>, not diagnosis, and requires qualified medical review. All reported metrics
+  are computed on held-out test data; the complete experimental logs, per-label breakdowns and
+  reproduction scripts accompany the project repository.</p>
+</footer>
+
+</div>
+</body>
+</html>

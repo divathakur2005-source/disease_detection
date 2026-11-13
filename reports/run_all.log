@@ -2,177 +2,168 @@
 ======================================================================
 >>> baseline A: image only
 ======================================================================
-[openi_image] train 2173 val 466 test 466 labels 8 vocab 233 device cuda
-  ep 01 loss 1.0551 val_loss 0.5563 val_auc 0.5997 val_f1 0.1811 (22s) *
-  ep 02 loss 0.8965 val_loss 0.4190 val_auc 0.7479 val_f1 0.3065 (43s) *
-  ep 03 loss 0.7599 val_loss 0.3820 val_auc 0.7861 val_f1 0.3945 (66s) *
-  ep 04 loss 0.6725 val_loss 0.3895 val_auc 0.8008 val_f1 0.3897 (89s) *
-  ep 05 loss 0.5849 val_loss 0.3701 val_auc 0.7990 val_f1 0.4074 (112s) 
-  ep 06 loss 0.5290 val_loss 0.3146 val_auc 0.8042 val_f1 0.4560 (136s) *
-  ep 07 loss 0.4614 val_loss 0.3706 val_auc 0.8117 val_f1 0.4118 (161s) *
-  ep 08 loss 0.4038 val_loss 0.3048 val_auc 0.8063 val_f1 0.4188 (187s) 
-  ep 09 loss 0.3517 val_loss 0.3121 val_auc 0.8044 val_f1 0.4387 (213s) 
-  ep 10 loss 0.3049 val_loss 0.2986 val_auc 0.8177 val_f1 0.4767 (239s) *
-  ep 11 loss 0.2784 val_loss 0.3005 val_auc 0.8116 val_f1 0.4695 (265s) 
-  ep 12 loss 0.2386 val_loss 0.3032 val_auc 0.8096 val_f1 0.4630 (292s) 
-  ep 13 loss 0.2133 val_loss 0.3182 val_auc 0.8011 val_f1 0.4388 (319s) 
-  ep 14 loss 0.1963 val_loss 0.3170 val_auc 0.8111 val_f1 0.4445 (345s) 
-  ep 15 loss 0.1699 val_loss 0.2947 val_auc 0.8034 val_f1 0.4385 (371s) 
+[openi_image] train 2421 val 519 test 519 labels 8 vocab 233 device cuda
+  ep 01 loss 1.0454 val_loss 0.5330 val_auc 0.6121 val_f1 0.1953 (28s) *
+  ep 02 loss 0.8785 val_loss 0.4480 val_auc 0.7617 val_f1 0.3087 (53s) *
+  ep 03 loss 0.7477 val_loss 0.3606 val_auc 0.7970 val_f1 0.4082 (78s) *
+  ep 04 loss 0.6544 val_loss 0.3863 val_auc 0.7919 val_f1 0.3899 (103s) 
+  ep 05 loss 0.5953 val_loss 0.3660 val_auc 0.7985 val_f1 0.4095 (127s) *
+  ep 06 loss 0.5289 val_loss 0.3798 val_auc 0.8021 val_f1 0.3899 (155s) *
+  ep 07 loss 0.4580 val_loss 0.3467 val_auc 0.7921 val_f1 0.4206 (187s) 
+  ep 08 loss 0.3987 val_loss 0.3600 val_auc 0.7855 val_f1 0.4137 (221s) 
+  ep 09 loss 0.3440 val_loss 0.3298 val_auc 0.8051 val_f1 0.4421 (253s) *
+  ep 10 loss 0.3007 val_loss 0.3451 val_auc 0.7985 val_f1 0.4315 (286s) 
+  ep 11 loss 0.2583 val_loss 0.3358 val_auc 0.7935 val_f1 0.4312 (318s) 
+  ep 12 loss 0.2274 val_loss 0.3269 val_auc 0.7842 val_f1 0.4595 (352s) 
+  ep 13 loss 0.2092 val_loss 0.3273 val_auc 0.7880 val_f1 0.4077 (384s) 
+  ep 14 loss 0.1757 val_loss 0.3193 val_auc 0.7945 val_f1 0.4195 (414s) 
   early stop
-[openi_image] TEST auc_macro 0.8264 f1_macro@0.5 0.4039 f1_macro@tuned 0.4069
-    normal             auc 0.819 f1 0.677 support 168
-    chest_infection    auc 0.833 f1 0.286 support 25
-    cardiomegaly       auc 0.922 f1 0.549 support 41
-    pleural_effusion   auc 0.867 f1 0.378 support 24
-    opacity            auc 0.656 f1 0.403 support 118
-    atelectasis        auc 0.796 f1 0.333 support 40
-    emphysema_copd     auc 0.888 f1 0.431 support 43
-    edema_congestion   auc 0.830 f1 0.174 support 7
-<<< baseline A: image only: OK in 385s
+[openi_image] TEST auc_macro 0.8216 f1_macro@0.5 0.4473 f1_macro@tuned 0.4302
+    normal             auc 0.812 f1 0.668 support 188
+    chest_infection    auc 0.765 f1 0.358 support 27
+    cardiomegaly       auc 0.912 f1 0.545 support 48
+    pleural_effusion   auc 0.832 f1 0.444 support 27
+    opacity            auc 0.613 f1 0.394 support 133
+    atelectasis        auc 0.836 f1 0.370 support 40
+    emphysema_copd     auc 0.892 f1 0.411 support 36
+    edema_congestion   auc 0.910 f1 0.387 support 17
+<<< baseline A: image only: OK in 430s
 
 ======================================================================
 >>> baseline B: clinical only
 ======================================================================
-[openi_clinical] train 2173 val 466 test 466 labels 8 vocab 233 device cuda
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 270, in <module>
-    main()
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 266, in main
-    run(a.mode, a.epochs, a.bs, a.lr, a.lr_backbone, not a.no_pretrain, a.init_image, a.aux_weight, a.tag, a.workers)
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 143, in run
-    model = build_model(mode, len(vocab), n_labels, pretrain, init_image).to(dev)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 81, in build_model
-    m.encoder.load_state_dict(enc)
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 2639, in load_state_dict
-    raise RuntimeError(
-RuntimeError: Error(s) in loading state_dict for SymptomEncoder:
-	size mismatch for symptom_emb.weight: copying a param with shape torch.Size([231, 256]) from checkpoint, the shape in current model is torch.Size([233, 256]).
-	size mismatch for mlp.0.weight: copying a param with shape torch.Size([256, 231]) from checkpoint, the shape in current model is torch.Size([256, 233]).
-<<< baseline B: clinical only: FAILED (exit 1) in 9s
+[openi_clinical] train 2421 val 519 test 519 labels 8 vocab 233 device cuda
+  remapped pretrained encoder 231 -> 233 symptoms (231 transferred, 2 new: X_RULE_OUT, X_FOLLOWUP)
+  loaded DDXPlus-pretrained SymptomEncoder
+  ep 01 loss 1.1601 val_loss 0.7267 val_auc 0.5189 val_f1 0.1612 (1s) *
+  ep 02 loss 1.0777 val_loss 0.6098 val_auc 0.5495 val_f1 0.1863 (1s) *
+  ep 03 loss 1.0224 val_loss 0.5888 val_auc 0.5763 val_f1 0.1982 (1s) *
+  ep 04 loss 1.0046 val_loss 0.5774 val_auc 0.5980 val_f1 0.1991 (2s) *
+  ep 05 loss 0.9862 val_loss 0.5517 val_auc 0.6133 val_f1 0.2096 (2s) *
+  ep 06 loss 0.9790 val_loss 0.5610 val_auc 0.6206 val_f1 0.2109 (3s) *
+  ep 07 loss 0.9666 val_loss 0.5416 val_auc 0.6237 val_f1 0.2150 (3s) *
+  ep 08 loss 0.9653 val_loss 0.5591 val_auc 0.6268 val_f1 0.2279 (4s) *
+  ep 09 loss 0.9531 val_loss 0.5492 val_auc 0.6346 val_f1 0.2269 (4s) *
+  ep 10 loss 0.9433 val_loss 0.5521 val_auc 0.6285 val_f1 0.2270 (5s) 
+  ep 11 loss 0.9462 val_loss 0.5477 val_auc 0.6291 val_f1 0.2317 (5s) 
+  ep 12 loss 0.9469 val_loss 0.5462 val_auc 0.6320 val_f1 0.2289 (5s) 
+  ep 13 loss 0.9369 val_loss 0.5444 val_auc 0.6345 val_f1 0.2300 (6s) 
+  ep 14 loss 0.9373 val_loss 0.5457 val_auc 0.6361 val_f1 0.2269 (6s) *
+  ep 15 loss 0.9388 val_loss 0.5440 val_auc 0.6335 val_f1 0.2275 (6s) 
+  ep 16 loss 0.9363 val_loss 0.5443 val_auc 0.6355 val_f1 0.2356 (7s) 
+  ep 17 loss 0.9258 val_loss 0.5432 val_auc 0.6358 val_f1 0.2339 (7s) 
+  ep 18 loss 0.9274 val_loss 0.5420 val_auc 0.6350 val_f1 0.2355 (7s) 
+  ep 19 loss 0.9315 val_loss 0.5424 val_auc 0.6351 val_f1 0.2271 (8s) 
+  early stop
+[openi_clinical] TEST auc_macro 0.6221 f1_macro@0.5 0.2228 f1_macro@tuned 0.2147
+    normal             auc 0.610 f1 0.539 support 188
+    chest_infection    auc 0.629 f1 0.230 support 27
+    cardiomegaly       auc 0.700 f1 0.244 support 48
+    pleural_effusion   auc 0.559 f1 0.063 support 27
+    opacity            auc 0.528 f1 0.368 support 133
+    atelectasis        auc 0.572 f1 0.158 support 40
+    emphysema_copd     auc 0.637 f1 0.182 support 36
+    edema_congestion   auc 0.743 f1 0.000 support 17
+<<< baseline B: clinical only: OK in 17s
 
 ======================================================================
 >>> proposed: cross-modal fusion
 ======================================================================
-[openi_fusion] train 2173 val 466 test 466 labels 8 vocab 233 device cuda
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 270, in <module>
-    main()
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 266, in main
-    run(a.mode, a.epochs, a.bs, a.lr, a.lr_backbone, not a.no_pretrain, a.init_image, a.aux_weight, a.tag, a.workers)
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 143, in run
-    model = build_model(mode, len(vocab), n_labels, pretrain, init_image).to(dev)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\Desktop\New folder (3)\src\medsupport\train\imaging.py", line 89, in build_model
-    m.clinical.load_state_dict(enc)
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 2639, in load_state_dict
-    raise RuntimeError(
-RuntimeError: Error(s) in loading state_dict for SymptomEncoder:
-	size mismatch for symptom_emb.weight: copying a param with shape torch.Size([231, 256]) from checkpoint, the shape in current model is torch.Size([233, 256]).
-	size mismatch for mlp.0.weight: copying a param with shape torch.Size([256, 231]) from checkpoint, the shape in current model is torch.Size([256, 233]).
-<<< proposed: cross-modal fusion: FAILED (exit 1) in 8s
+[openi_fusion] train 2421 val 519 test 519 labels 8 vocab 233 device cuda
+  remapped pretrained encoder 231 -> 233 symptoms (231 transferred, 2 new: X_RULE_OUT, X_FOLLOWUP)
+  loaded DDXPlus-pretrained SymptomEncoder
+  initialised image branch from C:\Users\HP\Desktop\New folder (3)\models\openi_image.pt
+  ep 01 loss 1.3509 val_loss 0.4871 val_auc 0.7943 val_f1 0.3578 (32s) *
+  ep 02 loss 0.9048 val_loss 0.3498 val_auc 0.7863 val_f1 0.4302 (68s) 
+  ep 03 loss 0.8023 val_loss 0.3729 val_auc 0.7781 val_f1 0.3930 (107s) 
+  ep 04 loss 0.7495 val_loss 0.3705 val_auc 0.7944 val_f1 0.3972 (147s) *
+  ep 05 loss 0.7019 val_loss 0.3827 val_auc 0.7893 val_f1 0.4430 (202s) 
+  ep 06 loss 0.6353 val_loss 0.4181 val_auc 0.7969 val_f1 0.4075 (259s) *
+  ep 07 loss 0.5840 val_loss 0.3698 val_auc 0.7837 val_f1 0.4097 (315s) 
+  ep 08 loss 0.5287 val_loss 0.4344 val_auc 0.7651 val_f1 0.4018 (372s) 
+  ep 09 loss 0.5184 val_loss 0.3956 val_auc 0.7801 val_f1 0.4106 (429s) 
+  ep 10 loss 0.4721 val_loss 0.4314 val_auc 0.7706 val_f1 0.4065 (490s) 
+  ep 11 loss 0.4339 val_loss 0.4438 val_auc 0.7894 val_f1 0.4213 (551s) 
+  early stop
+[openi_fusion] TEST auc_macro 0.8084 f1_macro@0.5 0.3897 f1_macro@tuned 0.4151
+    normal             auc 0.781 f1 0.609 support 188
+    chest_infection    auc 0.753 f1 0.281 support 27
+    cardiomegaly       auc 0.906 f1 0.529 support 48
+    pleural_effusion   auc 0.867 f1 0.289 support 27
+    opacity            auc 0.640 f1 0.420 support 133
+    atelectasis        auc 0.775 f1 0.220 support 40
+    emphysema_copd     auc 0.843 f1 0.380 support 36
+    edema_congestion   auc 0.901 f1 0.389 support 17
+<<< proposed: cross-modal fusion: OK in 574s
 
 ======================================================================
 >>> ablation: fusion without DDXPlus pre-training
 ======================================================================
-[openi_fusion_nopretrain] train 2173 val 466 test 466 labels 8 vocab 233 device cuda
-  ep 01 loss 1.6794 val_loss 0.5564 val_auc 0.6441 val_f1 0.1901 (29s) *
-  ep 02 loss 1.5143 val_loss 0.3868 val_auc 0.7876 val_f1 0.3334 (56s) *
-  ep 03 loss 1.3018 val_loss 0.4354 val_auc 0.7686 val_f1 0.3442 (86s) 
-  ep 04 loss 1.2071 val_loss 0.4429 val_auc 0.8069 val_f1 0.3700 (115s) *
-  ep 05 loss 1.1109 val_loss 0.3761 val_auc 0.8029 val_f1 0.3908 (142s) 
-  ep 06 loss 1.0330 val_loss 0.4671 val_auc 0.8110 val_f1 0.3791 (169s) *
-  ep 07 loss 0.9459 val_loss 0.3518 val_auc 0.8122 val_f1 0.4170 (198s) *
-  ep 08 loss 0.8568 val_loss 0.3162 val_auc 0.8248 val_f1 0.4334 (229s) *
-  ep 09 loss 0.7896 val_loss 0.3157 val_auc 0.8110 val_f1 0.4512 (256s) 
-  ep 10 loss 0.7630 val_loss 0.3399 val_auc 0.8134 val_f1 0.4295 (284s) 
-  ep 11 loss 0.6884 val_loss 0.3657 val_auc 0.8042 val_f1 0.4232 (314s) 
-  ep 12 loss 0.6443 val_loss 0.3154 val_auc 0.8099 val_f1 0.4361 (346s) 
-  ep 13 loss 0.5932 val_loss 0.3493 val_auc 0.8114 val_f1 0.4540 (376s) 
+[openi_fusion_nopretrain] train 2421 val 519 test 519 labels 8 vocab 233 device cuda
+  ep 01 loss 1.6656 val_loss 0.5598 val_auc 0.6476 val_f1 0.1868 (66s) *
+  ep 02 loss 1.4905 val_loss 0.4917 val_auc 0.7604 val_f1 0.2922 (129s) *
+  ep 03 loss 1.3066 val_loss 0.4083 val_auc 0.8065 val_f1 0.3814 (192s) *
+  ep 04 loss 1.1854 val_loss 0.4509 val_auc 0.8027 val_f1 0.3668 (282s) 
+  ep 05 loss 1.1008 val_loss 0.3402 val_auc 0.7908 val_f1 0.4071 (340s) 
+  ep 06 loss 1.0293 val_loss 0.3977 val_auc 0.8019 val_f1 0.3883 (403s) 
+  ep 07 loss 0.9368 val_loss 0.3751 val_auc 0.8004 val_f1 0.4122 (458s) 
+  ep 08 loss 0.8460 val_loss 0.3906 val_auc 0.7768 val_f1 0.4247 (510s) 
   early stop
-[openi_fusion_nopretrain] TEST auc_macro 0.8250 f1_macro@0.5 0.4288 f1_macro@tuned 0.4073
-    normal             auc 0.780 f1 0.643 support 168
-    chest_infection    auc 0.833 f1 0.400 support 25
-    cardiomegaly       auc 0.916 f1 0.535 support 41
-    pleural_effusion   auc 0.861 f1 0.465 support 24
-    opacity            auc 0.663 f1 0.421 support 118
-    atelectasis        auc 0.775 f1 0.289 support 40
-    emphysema_copd     auc 0.885 f1 0.467 support 43
-    edema_congestion   auc 0.886 f1 0.211 support 7
-<<< ablation: fusion without DDXPlus pre-training: OK in 391s
+[openi_fusion_nopretrain] TEST auc_macro 0.8416 f1_macro@0.5 0.4052 f1_macro@tuned 0.4100
+    normal             auc 0.797 f1 0.628 support 188
+    chest_infection    auc 0.852 f1 0.298 support 27
+    cardiomegaly       auc 0.900 f1 0.420 support 48
+    pleural_effusion   auc 0.816 f1 0.345 support 27
+    opacity            auc 0.658 f1 0.414 support 133
+    atelectasis        auc 0.891 f1 0.407 support 40
+    emphysema_copd     auc 0.914 f1 0.463 support 36
+    edema_congestion   auc 0.905 f1 0.267 support 17
+<<< ablation: fusion without DDXPlus pre-training: OK in 535s
 
 ======================================================================
 >>> symptom <-> X-ray correlation analysis
 ======================================================================
-using openi_* splits: 3105 patients
+using openi_* splits: 3459 patients
 | symptom / history | X-ray finding | patients | base rate | given symptom | lift |
 |---|---|---|---|---|---|
-| Hypoxia / low oxygen saturation | chest_infection | 27 | 5.4% | 25.9% | **4.8×** |
-| Have you had surgery within the last month? | pleural_effusion | 42 | 4.6% | 19.0% | **4.2×** |
+| Hypoxia / low oxygen saturation | chest_infection | 29 | 5.3% | 24.1% | **4.6×** |
+| Have you had surgery within the last month? | pleural_effusion | 47 | 4.6% | 17.0% | **3.7×** |
 | Do you feel your heart is beating fast (racing), irregular | pleural_effusion | 25 | 4.6% | 16.0% | **3.5×** |
-| Do you feel your heart is beating fast (racing), irregular | edema_congestion | 25 | 2.4% | 8.0% | **3.4×** |
-| Hypoxia / low oxygen saturation | pleural_effusion | 27 | 4.6% | 14.8% | **3.2×** |
-| Hypoxia / low oxygen saturation | edema_congestion | 27 | 2.4% | 7.4% | **3.2×** |
-| Have you ever had pneumonia? | chest_infection | 60 | 5.4% | 16.7% | **3.1×** |
-| Do you have chronic kidney failure? | pleural_effusion | 36 | 4.6% | 13.9% | **3.0×** |
-| Do you have a cough that produces colored or more abundant | chest_infection | 50 | 5.4% | 16.0% | **3.0×** |
-| Follow-up or interval-comparison scan | pleural_effusion | 32 | 4.6% | 12.5% | **2.7×** |
+| Do you feel your heart is beating fast (racing), irregular | edema_congestion | 25 | 2.4% | 8.0% | **3.3×** |
+| Have you ever had pneumonia? | chest_infection | 73 | 5.3% | 16.4% | **3.1×** |
+| Do you have chronic kidney failure? | pleural_effusion | 42 | 4.6% | 14.3% | **3.1×** |
+| Do you have a cough that produces colored or more abundant | chest_infection | 56 | 5.3% | 16.1% | **3.1×** |
+| Hypoxia / low oxygen saturation | pleural_effusion | 29 | 4.6% | 13.8% | **3.0×** |
+| Follow-up or interval-comparison scan | pleural_effusion | 37 | 4.6% | 13.5% | **2.9×** |
+| Hypoxia / low oxygen saturation | edema_congestion | 29 | 2.4% | 6.9% | **2.9×** |
 | Do you feel your heart is beating fast (racing), irregular | cardiomegaly | 25 | 9.0% | 24.0% | **2.7×** |
-| Do you have a cough? | chest_infection | 71 | 5.4% | 14.1% | **2.6×** |
-| Are you experiencing shortness of breath or difficulty bre | edema_congestion | 528 | 2.4% | 5.9% | **2.5×** |
-| Do you have swollen or painful lymph nodes? | chest_infection | 30 | 5.4% | 13.3% | **2.5×** |
-| Have you noticed any new fatigue, generalized and vague di | cardiomegaly | 27 | 9.0% | 22.2% | **2.5×** |
-| Have you ever had a heart attack or do you have angina (ch | pleural_effusion | 28 | 4.6% | 10.7% | **2.3×** |
-| Line / tube / pacemaker placement check | pleural_effusion | 47 | 4.6% | 10.6% | **2.3×** |
-| Do you have chronic kidney failure? | cardiomegaly | 36 | 9.0% | 19.4% | **2.1×** |
-| Have you ever had a heart attack or do you have angina (ch | cardiomegaly | 28 | 9.0% | 17.9% | **2.0×** |
-| Are you experiencing shortness of breath or difficulty bre | cardiomegaly | 528 | 9.0% | 17.2% | **1.9×** |
+| Have you ever had a heart attack or do you have angina (ch | pleural_effusion | 33 | 4.6% | 12.1% | **2.6×** |
+| Do you have a cough? | chest_infection | 80 | 5.3% | 13.8% | **2.6×** |
+| Line / tube / pacemaker placement check | pleural_effusion | 51 | 4.6% | 11.8% | **2.5×** |
+| Are you experiencing shortness of breath or difficulty bre | edema_congestion | 607 | 2.4% | 6.1% | **2.5×** |
+| Do you have swollen or painful lymph nodes? | chest_infection | 32 | 5.3% | 12.5% | **2.4×** |
+| Have you felt confused or disorientated lately? | pleural_effusion | 20 | 4.6% | 10.0% | **2.2×** |
+| Do you have chronic kidney failure? | cardiomegaly | 42 | 9.0% | 19.0% | **2.1×** |
+| Follow-up or interval-comparison scan | chest_infection | 37 | 5.3% | 10.8% | **2.1×** |
+| Do you have chronic kidney failure? | edema_congestion | 42 | 2.4% | 4.8% | **2.0×** |
 
 These associations are clinically coherent - heart failure raising pulmonary edema and
 pleural effusion, hypoxia raising chest infection, previous pneumonia raising it again -
 which is what makes fusing the two modalities worthwhile rather than merely possible.
 
 saved reports/figures/symptom_xray_lift.png
-<<< symptom <-> X-ray correlation analysis: OK in 7s
+<<< symptom <-> X-ray correlation analysis: OK in 6s
 
 ======================================================================
 >>> comparison table + ROC curves
 ======================================================================
 | model | AUC (macro) | F1 macro (tuned thr) | AUC normal | AUC chest_infection | AUC cardiomegaly | AUC pleural_effusion | AUC opacity | AUC atelectasis | AUC emphysema_copd | AUC edema_congestion |
 |---|---|---|---|---|---|---|---|---|---|---|
-| openi_image | 0.826 | 0.407 | 0.819 | 0.833 | 0.922 | 0.867 | 0.656 | 0.796 | 0.888 | 0.830 |
-| openi_fusion_nopretrain | 0.825 | 0.407 | 0.780 | 0.833 | 0.916 | 0.861 | 0.663 | 0.775 | 0.885 | 0.886 |
-| openi_clinicaltext | 0.626 | 0.232 | 0.584 | 0.686 | 0.610 | 0.687 | 0.566 | 0.614 | 0.595 | 0.670 |
-Traceback (most recent call last):
-  File "C:\Users\HP\Desktop\New folder (3)\scripts\compare_openi.py", line 88, in <module>
-    main()
-  File "C:\Users\HP\Desktop\New folder (3)\scripts\compare_openi.py", line 62, in main
-    fpr, tpr, _ = roc_curve(y[:, j], r["probs"][:, j])
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_ranking.py", line 1319, in roc_curve
-    _, fps, _, tps, thresholds = confusion_matrix_at_thresholds(
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 80, in inner_f
-    return f(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\_param_validation.py", line 191, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_ranking.py", line 1021, in confusion_matrix_at_thresholds
-    _sort_inputs_and_compute_classification_thresholds(
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\metrics\_ranking.py", line 892, in _sort_inputs_and_compute_classification_thresholds
-    check_consistent_length(y_true, y_score, sample_weight)
-  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\sklearn\utils\validation.py", line 458, in check_consistent_length
-    raise ValueError(
-ValueError: Found input variables with inconsistent numbers of samples: [466, 578]
-<<< comparison table + ROC curves: FAILED (exit 1) in 2s
+| openi_fusion_nopretrain | 0.842 | 0.410 | 0.797 | 0.852 | 0.900 | 0.816 | 0.658 | 0.891 | 0.914 | 0.905 |
+| openi_image | 0.822 | 0.430 | 0.812 | 0.765 | 0.912 | 0.832 | 0.613 | 0.836 | 0.892 | 0.910 |
+| openi_fusion | 0.808 | 0.415 | 0.781 | 0.753 | 0.906 | 0.867 | 0.640 | 0.775 | 0.843 | 0.901 |
+| openi_clinical | 0.622 | 0.215 | 0.610 | 0.629 | 0.700 | 0.559 | 0.528 | 0.572 | 0.637 | 0.743 |
+<<< comparison table + ROC curves: OK in 3s
 
 ======================================================================
 >>> compile reports/RESULTS.md
@@ -207,11 +198,12 @@ SymptomEncoder pre-training (token encoder used by the fusion model) on DDXPlus:
 
 | model | macro AUC | macro-F1 (tuned thr) | AUC normal | AUC chest_infection | AUC cardiomegaly | AUC pleural_effusion | AUC opacity | AUC atelectasis | AUC emphysema_copd | AUC edema_congestion |
 |---|---|---|---|---|---|---|---|---|---|---|
-| image | 0.826 | 0.407 | 0.819 | 0.833 | 0.922 | 0.867 | 0.656 | 0.796 | 0.888 | 0.830 |
-| fusion_nopretrain | 0.825 | 0.407 | 0.780 | 0.833 | 0.916 | 0.861 | 0.663 | 0.775 | 0.885 | 0.886 |
-| clinicaltext | 0.626 | 0.232 | 0.584 | 0.686 | 0.610 | 0.687 | 0.566 | 0.614 | 0.595 | 0.670 |
+| fusion_nopretrain | 0.842 | 0.410 | 0.797 | 0.852 | 0.900 | 0.816 | 0.658 | 0.891 | 0.914 | 0.905 |
+| image | 0.822 | 0.430 | 0.812 | 0.765 | 0.912 | 0.832 | 0.613 | 0.836 | 0.892 | 0.910 |
+| fusion | 0.808 | 0.415 | 0.781 | 0.753 | 0.906 | 0.867 | 0.640 | 0.775 | 0.843 | 0.901 |
+| clinical | 0.622 | 0.215 | 0.610 | 0.629 | 0.700 | 0.559 | 0.528 | 0.572 | 0.637 | 0.743 |
 
-Test set: 578 patients; positives per label: normal 207, chest_infection 31, cardiomegaly 58, pleural_effusion 22, opacity 136, atelectasis 51, emphysema_copd 38, edema_congestion 11.
+Test set: 519 patients; positives per label: normal 188, chest_infection 27, cardiomegaly 48, pleural_effusion 27, opacity 133, atelectasis 40, emphysema_copd 36, edema_congestion 17.
 
 
 ## 3. Symptom ↔ X-ray correlation (paired Open-I data)
@@ -222,30 +214,30 @@ Lift = P(X-ray label | symptom parsed from the indication) / P(X-ray label). Sup
 
 Each row: a symptom or history item parsed from the referral indication, and how much more
 likely the radiologist's finding becomes when it is present.
-Lift = P(finding | symptom) / P(finding). Patients: 3,105; minimum support 20.
+Lift = P(finding | symptom) / P(finding). Patients: 3,459; minimum support 20.
 
 | symptom / history | X-ray finding | patients | base rate | given symptom | lift |
 |---|---|---|---|---|---|
-| Hypoxia / low oxygen saturation | chest_infection | 27 | 5.4% | 25.9% | **4.8×** |
-| Have you had surgery within the last month? | pleural_effusion | 42 | 4.6% | 19.0% | **4.2×** |
+| Hypoxia / low oxygen saturation | chest_infection | 29 | 5.3% | 24.1% | **4.6×** |
+| Have you had surgery within the last month? | pleural_effusion | 47 | 4.6% | 17.0% | **3.7×** |
 | Do you feel your heart is beating fast (racing), irregular | pleural_effusion | 25 | 4.6% | 16.0% | **3.5×** |
-| Do you feel your heart is beating fast (racing), irregular | edema_congestion | 25 | 2.4% | 8.0% | **3.4×** |
-| Hypoxia / low oxygen saturation | pleural_effusion | 27 | 4.6% | 14.8% | **3.2×** |
-| Hypoxia / low oxygen saturation | edema_congestion | 27 | 2.4% | 7.4% | **3.2×** |
-| Have you ever had pneumonia? | chest_infection | 60 | 5.4% | 16.7% | **3.1×** |
-| Do you have chronic kidney failure? | pleural_effusion | 36 | 4.6% | 13.9% | **3.0×** |
-| Do you have a cough that produces colored or more abundant | chest_infection | 50 | 5.4% | 16.0% | **3.0×** |
-| Follow-up or interval-comparison scan | pleural_effusion | 32 | 4.6% | 12.5% | **2.7×** |
+| Do you feel your heart is beating fast (racing), irregular | edema_congestion | 25 | 2.4% | 8.0% | **3.3×** |
+| Have you ever had pneumonia? | chest_infection | 73 | 5.3% | 16.4% | **3.1×** |
+| Do you have chronic kidney failure? | pleural_effusion | 42 | 4.6% | 14.3% | **3.1×** |
+| Do you have a cough that produces colored or more abundant | chest_infection | 56 | 5.3% | 16.1% | **3.1×** |
+| Hypoxia / low oxygen saturation | pleural_effusion | 29 | 4.6% | 13.8% | **3.0×** |
+| Follow-up or interval-comparison scan | pleural_effusion | 37 | 4.6% | 13.5% | **2.9×** |
+| Hypoxia / low oxygen saturation | edema_congestion | 29 | 2.4% | 6.9% | **2.9×** |
 | Do you feel your heart is beating fast (racing), irregular | cardiomegaly | 25 | 9.0% | 24.0% | **2.7×** |
-| Do you have a cough? | chest_infection | 71 | 5.4% | 14.1% | **2.6×** |
-| Are you experiencing shortness of breath or difficulty bre | edema_congestion | 528 | 2.4% | 5.9% | **2.5×** |
-| Do you have swollen or painful lymph nodes? | chest_infection | 30 | 5.4% | 13.3% | **2.5×** |
-| Have you noticed any new fatigue, generalized and vague di | cardiomegaly | 27 | 9.0% | 22.2% | **2.5×** |
-| Have you ever had a heart attack or do you have angina (ch | pleural_effusion | 28 | 4.6% | 10.7% | **2.3×** |
-| Line / tube / pacemaker placement check | pleural_effusion | 47 | 4.6% | 10.6% | **2.3×** |
-| Do you have chronic kidney failure? | cardiomegaly | 36 | 9.0% | 19.4% | **2.1×** |
-| Have you ever had a heart attack or do you have angina (ch | cardiomegaly | 28 | 9.0% | 17.9% | **2.0×** |
-| Are you experiencing shortness of breath or difficulty bre | cardiomegaly | 528 | 9.0% | 17.2% | **1.9×** |
+| Have you ever had a heart attack or do you have angina (ch | pleural_effusion | 33 | 4.6% | 12.1% | **2.6×** |
+| Do you have a cough? | chest_infection | 80 | 5.3% | 13.8% | **2.6×** |
+| Line / tube / pacemaker placement check | pleural_effusion | 51 | 4.6% | 11.8% | **2.5×** |
+| Are you experiencing shortness of breath or difficulty bre | edema_congestion | 607 | 2.4% | 6.1% | **2.5×** |
+| Do you have swollen or painful lymph nodes? | chest_infection | 32 | 5.3% | 12.5% | **2.4×** |
+| Have you felt confused or disorientated lately? | pleural_effusion | 20 | 4.6% | 10.0% | **2.2×** |
+| Do you have chronic kidney failure? | cardiomegaly | 42 | 9.0% | 19.0% | **2.1×** |
+| Follow-up or interval-comparison scan | chest_infection | 37 | 5.3% | 10.8% | **2.1×** |
+| Do you have chronic kidney failure? | edema_congestion | 42 | 2.4% | 4.8% | **2.0×** |
 
 These associations are clinically coherent - heart failure raising pulmonary edema and
 pleural effusion, hypoxia raising chest infection, previous pneumonia raising it again -
@@ -256,8 +248,8 @@ which is what makes fusing the two modalities worthwhile rather than merely poss
 
 ======================================================================
   image          OK
-  clinical       FAILED
-  fusion         FAILED
+  clinical       OK
+  fusion         OK
   fusion_nopre   OK
 ======================================================================
 

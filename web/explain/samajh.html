@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RG24 — Poora Samajh (Kya Kiya, Kyu Kiya)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212a; --line:#2a2f3a;
+    --ink:#e8eaf0; --mute:#9aa3b2; --dim:#6b7484;
+    --accent:#6ea8fe; --good:#5dd39e; --warn:#f0b429; --bad:#f2777a; --purple:#b48ead;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Inter,system-ui,-apple-system,sans-serif;line-height:1.65;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+
+  header{padding:56px 0 28px;border-bottom:1px solid var(--line);margin-bottom:8px}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:12px 0 10px;font-weight:700;letter-spacing:-.02em}
+  .sub{color:var(--mute);font-size:17px;max-width:65ch}
+  .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--panel2);border:1px solid var(--line);color:var(--mute);
+    font-size:12px;padding:5px 11px;border-radius:999px;font-weight:500}
+
+  nav.toc{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:18px 20px;margin:28px 0}
+  nav.toc div{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);
+    font-weight:600;margin-bottom:10px}
+  nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px}
+  @media(max-width:620px){nav.toc ol{columns:1}}
+  nav.toc li{margin:5px 0}
+  nav.toc a{color:var(--ink);text-decoration:none;font-size:14.5px}
+  nav.toc a:hover{color:var(--accent);text-decoration:underline}
+
+  h2{font-size:25px;margin:52px 0 6px;font-weight:650;letter-spacing:-.01em;scroll-margin-top:20px}
+  h2 .n{color:var(--accent);font-family:var(--mono);font-size:16px;margin-right:10px;font-weight:500}
+  h3{font-size:17.5px;margin:30px 0 6px;font-weight:600;color:#f2f4f8}
+  p{margin:11px 0}
+  .lede{color:var(--mute);font-size:15.5px;margin-bottom:18px}
+  a{color:var(--accent)}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:20px 0}
+  .card.q{border-left:3px solid var(--accent)}
+  .card.why{border-left:3px solid var(--purple)}
+  .card.warn{border-left:3px solid var(--warn);background:#1f1b12}
+  .card.good{border-left:3px solid var(--good);background:#121e19}
+  .card.bad{border-left:3px solid var(--bad);background:#1f1416}
+  .card h4{margin:0 0 8px;font-size:15px;font-weight:650;letter-spacing:.01em}
+  .card.q h4{color:var(--accent)} .card.why h4{color:var(--purple)}
+  .card.warn h4{color:var(--warn)} .card.good h4{color:var(--good)} .card.bad h4{color:var(--bad)}
+  .card p:last-child{margin-bottom:0}
+
+  table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line)}
+  th{color:var(--dim);font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-size:13.5px}
+  tr.hl td{background:#19202b}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  code{font-family:var(--mono);background:#11141a;border:1px solid var(--line);
+    padding:1.5px 5px;border-radius:4px;font-size:12.8px;color:#cbd3e1}
+  pre{background:#11141a;border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;overflow-x:auto;font-family:var(--mono);font-size:12.8px;line-height:1.6;color:#cbd3e1}
+  pre .c{color:var(--dim)} pre .g{color:var(--good)} pre .r{color:var(--bad)} pre .y{color:var(--warn)}
+
+  .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+  @media(max-width:620px){.g2{grid-template-columns:1fr}}
+  .stat{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:15px 17px}
+  .stat .v{font-family:var(--mono);font-size:25px;font-weight:500;letter-spacing:-.02em}
+  .stat .l{font-size:12.5px;color:var(--mute);margin-top:3px}
+  .stat .d{font-size:11.5px;color:var(--dim);margin-top:5px}
+  .vg{color:var(--good)} .vb{color:var(--bad)} .vw{color:var(--warn)} .va{color:var(--accent)}
+
+  .flow{background:#11141a;border:1px solid var(--line);border-radius:10px;padding:18px;
+    font-family:var(--mono);font-size:12.3px;line-height:1.75;overflow-x:auto;color:#cbd3e1;white-space:pre}
+  ul,ol{padding-left:22px} li{margin:6px 0}
+  .tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:4px;
+    background:#11141a;border:1px solid var(--line);color:var(--mute);margin-right:5px}
+  hr{border:0;border-top:1px solid var(--line);margin:42px 0}
+  footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  .pend{color:var(--warn);font-style:italic}
+  .kbd{font-family:var(--mono);font-size:12px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Group RG24 · Internal Working Note</div>
+  <h1>Poora Samajh: humne kya kiya, kyu kiya, aur result kya nikla</h1>
+  <p class="sub">Yeh page tumhare liye hai — supervisor ke liye nahi. Har decision ka
+  <strong>kyu</strong> likha hai: fusion ne image baseline ko beat kiya (0.842 vs 0.822),
+  <strong>lekin</strong> DDXPlus pre-training ne ulta nuksan kiya — aur woh bhi poori
+  honesty se likha hai, wajah ke saath. Viva mein jo sawaal pooche jaa sakte hain, unke
+  jawab bhi hain.</p>
+  <div class="meta">
+    <span class="chip">AI-Based Medical Decision-Support</span>
+    <span class="chip">Major Project-I · 18B19CI791</span>
+    <span class="chip">JUIT CSE &amp; IT</span>
+    <span class="chip">13 Nov 2026</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <div>Index</div>
+  <ol>
+    <li><a href="#p1">Asli problem kya thi</a></li>
+    <li><a href="#p2">Shared vocabulary ka idea</a></li>
+    <li><a href="#p3">Pipeline kaise banta hai</a></li>
+    <li><a href="#p4">Teen bugs jo mile</a></li>
+    <li><a href="#p5">Final results</a></li>
+    <li><a href="#p6">Clinical branch kamzor kyu</a></li>
+    <li><a href="#p7">Lift 5.2× ka sach</a></li>
+    <li><a href="#p8">Viva ke sawaal</a></li>
+    <li><a href="#p9">Aage kya kar sakte hain</a></li>
+  </ol>
+</nav>
+
+<h2 id="p1"><span class="n">01</span>Asli problem kya thi</h2>
+<p class="lede">Project ka pehla crisis: "multimodal fusion" ke paas fuse karne ke liye kuch nahi tha.</p>
+
+<p>Proposal mein teen dataset the — symptom questionnaire, chest X-rays, aur diabetes records.
+Dikkat yeh thi ki yeh <strong>teen alag-alag patients ke groups</strong> se aate hain. Ek bhi
+patient aisa nahi tha jo do dataset mein common ho.</p>
+
+<div class="card bad">
+  <h4>Isliye symptoms X-ray se correlate nahi ho rahe the</h4>
+  <p>Jab patient A ke symptoms aur patient B ka X-ray lete ho, to unke beech koi relation
+  hi nahi hai — model ko sikhne ke liye signal hi nahi milta. Yeh model ki galti nahi thi,
+  <strong>data pairing</strong> ki galti thi.</p>
+</div>
+
+<h2 id="p2"><span class="n">02</span>Shared vocabulary ka idea</h2>
+<p class="lede">Do discoveries ne project ko chalaya.</p>
+
+<h3>(a) Symptom dataset actually DDXPlus hai</h3>
+<p>Kaggle ka "disease-symptom-prediction" dataset asal mein <strong>DDXPlus</strong> research
+dataset hai: 6,10,000 patients, <strong>223 standardised yes/no clinical questions</strong>,
+aur <strong>49 diagnoses</strong> — Pneumonia, Bronchitis, URTI, Influenza, TB, COPD sab included.
+Original 41-disease toy dataset se bahut richer.</p>
+
+<h3>(b) X-ray dataset ke andar missing link mila</h3>
+<p>Open-I ke har chest X-ray report mein ek <strong>"indication"</strong> field hoti hai —
+referring doctor ne scan kyu order kiya, free text mein:</p>
+<pre>"68-year-old with shortness of breath and weakness. Hypertension. Diabetes."</pre>
+<p>Humne is text ko parse karke <strong>wahi DDXPlus question codes</strong> mein convert kiya.
+Ab har X-ray ke paas <em>usi patient</em> ka symptom vector hai. Yeh hi paired multimodal data hai.</p>
+
+<div class="card why">
+  <h4>Kyu yeh approach sahi hai</h4>
+  <p>Dono modality ek hi <strong>223-code vocabulary</strong> bolte hain. Isliye DDXPlus ke
+  6.1 lakh patients par trained symptom encoder ko Open-I ke chhote dataset par transfer
+  kiya ja sakta hai — yeh project ka core technical contribution hai.</p>
+</div>
+
+<h2 id="p3"><span class="n">03</span>Pipeline kaise banta hai</h2>
+<div class="flow"> Symptoms (223 questions)            Chest X-ray (frontal)
+         │                                    │
+ SymptomEncoder                         DenseNet-121
+ (6.1 lakh DDXPlus                      (ImageNet init,
+  patients par pre-trained)              7×7×1024 features)
+         │                                    │
+         └──► bidirectional cross-modal ◄─────┘
+                    attention
+                       │
+            8 thoracic findings (multi-label):
+   normal · chest_infection · cardiomegaly · pleural_effusion
+   opacity · atelectasis · emphysema_copd · edema_congestion
+                       │
+ Vitals ─► Diabetes model ─► TRIAGE ─► Grad-CAM explanation
+                       │
+         LOW / MODERATE / HIGH / EMERGENCY</div>
+
+<p>Teen models <strong>same patients, same split</strong> par train hote hain — isliye
+comparison fair hai:</p>
+<ul>
+  <li><span class="tag">A</span>X-ray only (DenseNet-121) — baseline</li>
+  <li><span class="tag">B</span>Symptoms only (SymptomEncoder) — baseline</li>
+  <li><span class="tag">C</span>Fusion (dono + cross-modal attention) — <strong>humara proposed model</strong></li>
+  <li><span class="tag">D</span>Ablation: fusion <em>without</em> DDXPlus pre-training</li>
+</ul>
+
+<h2 id="p4"><span class="n">04</span>Teen bugs jo mile (aur yeh important hai)</h2>
+<p class="lede">Yeh section viva mein kaam aayega — debugging bhi engineering work hai.</p>
+
+<h3>Bug 1 — Windows pagefile crash</h3>
+<p>Training shuru hone se pehle hi mar jaati thi:</p>
+<pre><span class="r">OSError: [WinError 1455] The paging file is too small</span></pre>
+<p><strong>Kyu:</strong> Windows par DataLoader workers <em>spawn</em> hote hain (Linux ki tarah
+fork nahi). Har worker dobara <code>torch</code> import karta hai aur CUDA DLLs ke liye memory
+reserve karta hai. 4 workers = 16 GB laptop ki commit limit khatam.</p>
+<p><strong>Fix:</strong> <code>DEFAULT_WORKERS = 0 if sys.platform == "win32" else 4</code>.
+Speed par asar nahi — GPU hi bottleneck hai (~27s/epoch).</p>
+<div class="card warn">
+  <h4>Bonus problem: 13 orphan processes</h4>
+  <p>Crashed runs exit nahi hue the — <strong>13 python processes 37.5 GB commit charge</strong>
+  pakad ke baithe the (working set sirf 2 MB each!). Isliye laptop abnormal lag raha tha aur
+  naya run 512 KB bhi allocate nahi kar paa raha tha. Unhe kill karne par free commit
+  6 GB → 28.9 GB ho gaya.</p>
+</div>
+
+<h3>Bug 2 — Vocabulary mismatch (yeh sabse khatarnak tha)</h3>
+<pre><span class="r">size mismatch for symptom_emb.weight:
+  checkpoint [231, 256] vs model [233, 256]</span></pre>
+<p><strong>Kyu:</strong> SymptomEncoder <strong>231</strong> symptoms par pre-trained tha.
+Baad mein vocabulary expand hui to Open-I <strong>233</strong> par aa gaya.</p>
+<div class="card bad">
+  <h4>Easy fix galat hota — yeh samajhna zaroori hai</h4>
+  <p>Seedha tensor "pad" kar dena sabse aasaan tha. <strong>Lekin</strong> dono vocabulary ka
+  <em>order bhi different</em> tha. Padding karne se pre-trained weights <strong>galat symptoms</strong>
+  se jud jaate. Model phir bhi train hota, accha-sa number bhi deta — aur humara pura
+  "shared vocabulary" claim <em>chupke se</em> jhooth ho jaata. Yeh woh bug hai jo viva tak
+  zinda reh jaata hai.</p>
+</div>
+<p><strong>Sahi fix:</strong> checkpoint ke andar <code>features</code> list stored thi — symptom
+ke <em>naam</em>. Usse row-by-row remap kiya:</p>
+<pre><span class="g">remapped pretrained encoder 231 -> 233 symptoms
+  (231 transferred, 2 new: X_RULE_OUT, X_FOLLOWUP)</span></pre>
+<p>Verify bhi kiya: <strong>231/231 weights sahi symptom par</strong> gaye (0 mismatches),
+aur 2 naye symptoms fresh initialization par rahe.</p>
+
+<h3>Bug 3 — Comparison table mein stale model aa raha tha</h3>
+<p><code>compare_openi.py</code> <em>har</em> <code>openi_*_metrics.json</code> ko utha leta tha.
+Ek purana run (<code>openi_clinicaltext</code>, 578 rows, vocabulary expansion se <em>pehle</em> ka)
+table mein ghus gaya tha AUC 0.626 ke saath — jo current split se comparable hi nahi tha —
+aur phir ROC step ko crash kar diya.</p>
+<p><strong>Fix:</strong> jis run ke rows current test split se match nahi karte, use skip karo
+aur <em>loudly</em> report karo:</p>
+<pre><span class="y">[skipped stale run(s) from a different split]
+  - openi_clinicaltext (578 rows vs 519 in current split)</span></pre>
+
+<h2 id="p5"><span class="n">05</span>Final results</h2>
+<p class="lede">Yeh numbers actual trained models se hain, same 2,421/519/519 split par.</p>
+<div class="tw">
+<table>
+  <thead><tr><th>Model</th><th class="num">Macro AUC</th><th class="num">F1 (tuned)</th><th>Matlab</th></tr></thead>
+  <tbody>
+    <tr class="hl"><td><strong>D — Fusion <em>without</em> DDXPlus pre-training</strong></td>
+      <td class="num vg">0.8416</td><td class="num">0.410</td><td>🏆 Sabse best</td></tr>
+    <tr><td>A — Image only (DenseNet-121)</td>
+      <td class="num">0.8216</td><td class="num">0.430</td><td>Baseline</td></tr>
+    <tr><td>C — Fusion <em>with</em> pre-training (original proposed)</td>
+      <td class="num vb">0.8084</td><td class="num">0.415</td><td>Image se bhi kam</td></tr>
+    <tr><td>B — Clinical only (symptoms)</td>
+      <td class="num vb">0.6221</td><td class="num">0.215</td><td>Chance (0.5) se thoda upar</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="card good">
+  <h4>Headline: cross-modal fusion ne kaam kiya ✅</h4>
+  <p><strong>0.8416 vs 0.8216</strong> — fusion ne image-only baseline ko <strong>+0.020 AUC</strong>
+  se beat kiya, aur 8 findings mein se <strong>4 par</strong> sabse accha raha. Dono modality
+  milakar X-ray alone se behtar predict karte hain. Project ka central claim
+  <strong>demonstrate ho gaya</strong>.</p>
+</div>
+
+<div class="card bad">
+  <h4>Par ek twist hai — aur yeh chhupana nahi chahiye</h4>
+  <p>Jo fusion <strong>pre-training ke saath</strong> tha (humara original proposed model),
+  woh <strong>0.8084</strong> — image-only se bhi <em>kam</em>. Matlab DDXPlus pre-training
+  ne <strong>madad nahi ki, nuksan kiya</strong>.</p>
+  <p><strong>Kyu (probable):</strong> encoder 6.1 lakh DDXPlus patients par trained hai, jahan
+  har patient ke paas <strong>bahut saare</strong> symptoms hote hain (detailed questionnaire).
+  Open-I mein average <strong>1.35</strong> symptoms hain. Encoder ne jo representation seekha
+  woh dense input expect karta hai — sparse input par woh prior <em>galat</em> hai. Fresh
+  initialization is sparse data ko better adapt karta hai.</p>
+  <p>Yeh <strong>ablation ka asli faida</strong> hai — isi liye ablation run karte hain.</p>
+</div>
+
+<h3>Per-label breakdown (kahan kaun jeeta)</h3>
+<div class="tw">
+<table>
+  <thead><tr><th>Finding</th><th class="num">Test cases</th><th class="num">Image</th>
+    <th class="num">Fusion (no-pre)</th><th class="num">Fusion (pre)</th><th class="num">Clinical</th><th>Winner</th></tr></thead>
+  <tbody>
+    <tr><td>normal</td><td class="num">188</td><td class="num vg">0.812</td><td class="num">0.797</td><td class="num">0.781</td><td class="num">0.610</td><td>image</td></tr>
+    <tr class="hl"><td>chest_infection</td><td class="num">27</td><td class="num">0.765</td><td class="num vg">0.852</td><td class="num">0.753</td><td class="num">0.629</td><td>fusion</td></tr>
+    <tr><td>cardiomegaly</td><td class="num">48</td><td class="num vg">0.912</td><td class="num">0.900</td><td class="num">0.906</td><td class="num">0.700</td><td>image</td></tr>
+    <tr><td>pleural_effusion</td><td class="num">27</td><td class="num">0.832</td><td class="num">0.816</td><td class="num vg">0.867</td><td class="num">0.559</td><td>fusion(pre)</td></tr>
+    <tr class="hl"><td>opacity</td><td class="num">133</td><td class="num">0.613</td><td class="num vg">0.658</td><td class="num">0.640</td><td class="num">0.528</td><td>fusion</td></tr>
+    <tr class="hl"><td>atelectasis</td><td class="num">40</td><td class="num">0.836</td><td class="num vg">0.891</td><td class="num">0.775</td><td class="num">0.572</td><td>fusion</td></tr>
+    <tr class="hl"><td>emphysema_copd</td><td class="num">36</td><td class="num">0.892</td><td class="num vg">0.914</td><td class="num">0.843</td><td class="num">0.637</td><td>fusion</td></tr>
+    <tr><td>edema_congestion</td><td class="num">17</td><td class="num vg">0.910</td><td class="num">0.905</td><td class="num">0.901</td><td class="num">0.743</td><td>image</td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>Score:</strong> fusion (no-pre) 4 wins · image 3 wins · fusion (pre) 1 win ·
+clinical 0. Interesting: fusion <code>chest_infection</code> (+0.087) aur
+<code>atelectasis</code> (+0.055) par sabse zyada jeeta — yeh woh findings hain jahan
+infection/breathing symptoms genuinely informative hote hain.</p>
+
+<div class="card warn">
+  <h4>Honest caveat (viva mein khud bolna behtar hai)</h4>
+  <p>+0.020 AUC ka gain <strong>chhota</strong> hai, aur test set sirf <strong>519 patients</strong>
+  ka hai. Rare findings par confidence interval chaudi hai —
+  <code>edema_congestion</code> ke sirf 17 cases, <code>chest_infection</code> ke 27.
+  Humne statistical significance test (jaise DeLong) nahi chalaya. Isliye honest statement yeh
+  hai: <em>"fusion ne consistent improvement dikhaya 4/8 labels par aur macro AUC par,
+  lekin single split par — confirm karne ke liye multiple seeds ya cross-validation chahiye."</em></p>
+</div>
+
+<h2 id="p6"><span class="n">06</span>Clinical branch kamzor kyu hai (aur pre-training kyu backfire hua)</h2>
+<p class="lede">Fusion jeeta, par margin chhota raha aur pre-training ulta pada. Dono ki wajah
+ek hi hai — data ki sparsity. Yeh measure karna project ka asli analytical kaam tha.</p>
+
+<p>Humne clinical branch ka input measure kiya. Pata chala woh
+<strong>bhookha</strong> hai — data hi patla hai:</p>
+
+<div class="g2">
+  <div class="stat"><div class="v va">53<span style="font-size:15px;color:var(--dim)"> / 233</span></div>
+    <div class="l">columns jo kabhi fire hote hain</div><div class="d">180 symptoms poori tarah dead</div></div>
+  <div class="stat"><div class="v vw">1.35</div>
+    <div class="l">average symptoms per patient</div><div class="d">8 findings predict karne ke liye</div></div>
+  <div class="stat"><div class="v vb">15.2%</div>
+    <div class="l">patients with empty symptom vector</div><div class="d">model guess kar raha hai</div></div>
+  <div class="stat"><div class="v vb">8.3%</div>
+    <div class="l">irreducible (fix nahi ho sakta)</div><div class="d">Open-I ne de-identify kar diya</div></div>
+</div>
+
+<h3>Symptoms kahan gaye</h3>
+<p>Open-I ne publish karne se pehle text ko <strong>de-identify</strong> kiya — clinical terms
+ko <code>XXXX</code> se replace kar diya. Actual examples:</p>
+<pre>"XXXX-year-old XXXX with XXXX."      <span class="c">← kuch bacha hi nahi</span>
+"XXXX, XXXX pain"                    <span class="c">← body part gayab</span>
+"Elevated blood pressure and thoracic pain"  <span class="c">← yeh parser ki galti thi</span></pre>
+
+<div class="card q">
+  <h4>Sabse badi dikkat: frequent features hi useless hain</h4>
+  <p>Top features: <code>E_14</code> (24.1%), <strong><code>X_FEMALE</code> (17.6%)</strong>,
+  <code>E_66</code> (17.4%), <strong><code>X_MALE</code> (12.1%)</strong>.</p>
+  <p>Top 4 mein se <strong>do sex markers</strong> hain — jo thoracic findings ke baare mein
+  kuch nahi batate. Jo features clinically useful hain (<code>X_TB_SCREEN</code> 2.7%,
+  <code>X_PAIN_OTHER</code> 3.9%) woh bahut rare hain. Matlab: jo signal <em>available</em> hai
+  woh <em>diagnostic</em> nahi hai.</p>
+</div>
+
+<p>Isliye clinical branch sirf <strong>0.622</strong> tak pahunchta hai. Fusion phir bhi
+image-only ko beat karta hai (0.842 vs 0.822) — matlab thoda-sa symptom signal bhi
+<em>useful</em> hai jab attention use kare. Par margin chhota hai (+0.020) kyunki second
+modality patli hai. Aur <strong>yahi sparsity</strong> explain karti hai ki DDXPlus
+pre-training kyu backfire hua: encoder dense questionnaires (bahut saare symptoms) par
+trained tha, Open-I deta hai 1.35.</p>
+
+<h3>Humne parser improve bhi kiya</h3>
+<p>296 cases audit kiye jahan real words the par parse empty tha. Rules add kiye:
+<code>rales</code>, <code>elevated blood pressure</code>, <code>syncopal</code>, <code>nodule</code>,
+<code>throat pain</code>, <code>headache</code>, <code>chronic airway obstruction</code>.</p>
+<div class="card why">
+  <h4>Ek judgment call jo batana zaroori hai</h4>
+  <p>Sabse bada gap tha bare "pain" (52 cases, jaise <code>"XXXX pain"</code>). DDXPlus ka
+  <code>E_53</code> literally "pain somewhere" hai — perfect match. <strong>Lekin</strong> har
+  "pain" ko E_53 map karne se woh <strong>30.9% patients</strong> par lag gaya — corpus ka sabse
+  common feature ban jaata, aur <code>E_14</code> (chest pain) ko duplicate karta.</p>
+  <p>Isliye use <strong>fallback</strong> banaya: sirf tab fire hota hai jab koi specific pain
+  site match na ho. Ab prevalence <strong>4.1%</strong> — redacted cases recover ho gaye, noise
+  add nahi hua.</p>
+</div>
+<p><strong>Effect:</strong> 87 of 296 recovered (baaki irrecoverably redacted),
+density 1.28 → <strong>1.35</strong>, empty vectors 17.8% → <strong>15.2%</strong>, aur
+paired patients 3,105 → <strong>3,459</strong> (11% zyada data). Baseline B
+0.5808 → <strong>0.6221</strong> — real gain, par image branch ke 0.82 se door. Phir bhi itna signal kaafi tha ki fusion image-only ko beat kar le.</p>
+
+<h2 id="p7"><span class="n">07</span>Lift 5.2× ka sach (viva mein pooch sakte hain)</h2>
+<div class="card q">
+  <h4>"Tumne kaha tha symptoms 5.2× predictive hain. Ab keh rahe ho weak hain. Contradiction?"</h4>
+  <p><strong>Nahi.</strong> Dono sach hain, par do alag sawaal ka jawab dete hain.</p>
+  <p>Lift <em>un patients</em> par measure hui jahan symptom <strong>present</strong> hai —
+  hypoxia ke liye sirf <strong>33 patients</strong>, heart disease ke liye <strong>30</strong>.</p>
+  <p>Ek feature present hone par strongly predictive ho sakta hai, <strong>aur</strong> phir bhi
+  classifier ke liye useless — agar woh sirf 1% cases mein dikhta hai. Lift batati hai
+  "jab yeh symptom ho to kya hota hai"; classifier ko "har patient ke liye" predict karna
+  padta hai.</p>
+</div>
+
+<h2 id="p8"><span class="n">08</span>Viva ke sawaal (aur jawab)</h2>
+
+<div class="card q">
+  <h4>"DDXPlus par 99.34% accuracy? Yeh too good to be true hai."</h4>
+  <p>Bilkul sahi observation, aur hum khud yeh likhte hain. DDXPlus <strong>synthetic</strong>
+  dataset hai — clinical knowledge base se generate hua hai, isliye symptoms aur diagnosis ke
+  beech relation almost deterministic hai. Woh number batata hai <em>pipeline correct hai</em>,
+  model clinically accha hai yeh nahi. Project ka honest test Open-I par hai — real radiographs,
+  real noisy text, aur wahan numbers 0.62–0.82 hain.</p>
+</div>
+
+<div class="card q">
+  <h4>"Pre-training ne nuksan kiya — to tumhara shared-vocabulary contribution fail hua?"</h4>
+  <p>Yeh sabse sharp sawaal hai. Honest jawab do hisson mein:</p>
+  <p><strong>(1) Shared vocabulary zaroori thi.</strong> Uske bina koi bhi fusion model exist
+  hi nahi karta — teen datasets mein ek bhi common patient nahi tha. Paired data banane ka
+  mechanism yahi hai, aur fusion (0.842 &gt; 0.822) usi paired data par jeeta hai.</p>
+  <p><strong>(2) Pre-trained <em>weights</em> transfer karna madad nahi kiya</strong> — 0.808 vs
+  0.842. Yeh ek alag claim hai, aur yeh humne khud ablation se detect kiya. Wajah measurable
+  hai: DDXPlus dense questionnaires deta hai, Open-I 1.35 symptoms. Transfer learning tab
+  kaam karta hai jab source aur target distribution match karein; yahan nahi karte.</p>
+  <p>Toh contribution (vocabulary) stands, specific technique (weight transfer) ne is corpus
+  par kaam nahi kiya. Dono alag se report karna hi sahi science hai.</p>
+</div>
+
+<div class="card q">
+  <h4>"Sirf 519 test patients — numbers reliable hain?"</h4>
+  <p>Macro AUC reasonably stable hai, par <strong>rare findings noisy hain</strong>:
+  <code>edema_congestion</code> ke sirf 17 test cases hain, <code>chest_infection</code> ke 27.
+  Isliye hum macro AUC par comparison karte hain, individual rare-class F1 par nahi. Yeh
+  limitation hum khud likhte hain — defend karne ki koshish nahi karte.</p>
+</div>
+
+<div class="card q">
+  <h4>"Clinical use ke liye ready hai?"</h4>
+  <p>Nahi, aur yeh har page par likha hai. Yeh <strong>decision support</strong> research
+  prototype hai, diagnosis nahi. Qualified medical review zaroori hai. 519 patients par
+  0.82 AUC clinical deployment ke liye bahut door hai.</p>
+</div>
+
+<h2 id="p9"><span class="n">09</span>Aage kya kar sakte hain</h2>
+<ol>
+  <li><strong>Behtar paired dataset:</strong> MIMIC-CXR mein full radiology reports +
+  structured clinical data hai, aur de-identification itni aggressive nahi. Yeh sabse
+  high-impact next step hai.</li>
+  <li><strong>Impression/findings text use karo:</strong> humne sirf <code>indication</code>
+  field use ki. Baaki report text mein zyada signal ho sakta hai (par careful — woh
+  radiologist ka output hai, label leakage ka risk hai).</li>
+  <li><strong>Pre-training strategy badlo (sabse interesting lead):</strong> pure weight
+  transfer ne nuksan kiya. Behtar options: encoder ko Open-I ki sparsity par
+  <em>fine-tune</em> karo, ya DDXPlus patients ko artificially sparsify karke pre-train karo
+  (sirf 1-2 symptoms rakh ke), taaki source distribution target se match kare.</li>
+  <li><strong>Multiple seeds / cross-validation chalao:</strong> +0.020 ka gain single split
+  par hai. 5 seeds par mean ± std report karna claim ko bahut strong banayega. Yeh sabse
+  sasta aur sabse zyada credibility dene wala step hai.</li>
+  <li><strong>Image branch freeze karke fusion tune karo:</strong> fusion (pre) epoch 10 par
+  early-stop hua — overfitting ka signal. 2,421 training cases 9M-parameter model ke
+  liye kam hain.</li>
+  <li><strong>Cardiac findings par focus:</strong> baseline B <code>cardiomegaly</code> (0.700)
+  aur <code>edema_congestion</code> (0.743) par theek karta hai, <code>opacity</code> (0.528) par
+  nahi. Clinically coherent hai — "CHF" likhne wala doctor cardiac failure describe kar
+  raha hai, jabki opacity ka koi distinctive presenting symptom nahi hota. Sirf cardiac
+  subset par fusion zyada promising ho sakta hai.</li>
+</ol>
+
+<hr>
+<footer>
+  <p><strong>Yeh page internal working note hai</strong> — Group RG24 ke liye. Supervisor ke
+  liye alag formal version hai.</p>
+  <p>Research prototype for an academic project. This is clinical decision
+  <strong>support</strong>, not a diagnosis, and requires qualified medical review.</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -2,1081 +2,1225 @@
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"normal",
-    "p_label_given_evidence":0.1666666667,
-    "p_label":0.3610305958,
-    "lift":0.4616413916
+    "p_label_given_evidence":0.15625,
+    "p_label":0.3610870194,
+    "lift":0.4327211769
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"chest_infection",
-    "p_label_given_evidence":0.1333333333,
-    "p_label":0.0541062802,
-    "lift":2.4642857143
+    "p_label_given_evidence":0.125,
+    "p_label":0.0526163631,
+    "lift":2.3756868132
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.0666666667,
-    "p_label":0.0904991948,
-    "lift":0.7366548043
+    "p_label_given_evidence":0.0625,
+    "p_label":0.0901994796,
+    "lift":0.6929086538
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0457326892,
-    "lift":0.0
+    "p_label_given_evidence":0.03125,
+    "p_label":0.0462561434,
+    "lift":0.6755859375
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"opacity",
-    "p_label_given_evidence":0.3,
-    "p_label":0.2286634461,
-    "lift":1.311971831
+    "p_label_given_evidence":0.28125,
+    "p_label":0.2260769008,
+    "lift":1.2440457161
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"atelectasis",
-    "p_label_given_evidence":0.0333333333,
-    "p_label":0.0811594203,
-    "lift":0.4107142857
+    "p_label_given_evidence":0.03125,
+    "p_label":0.08065915,
+    "lift":0.3874327957
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.1,
-    "p_label":0.0743961353,
-    "lift":1.3441558442
+    "p_label_given_evidence":0.09375,
+    "p_label":0.0728534258,
+    "lift":1.2868303571
   },
   {
     "evidence":"E_9",
     "question":"Do you have swollen or painful lymph nodes?",
-    "n":30,
+    "n":32,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"normal",
-    "p_label_given_evidence":0.4320323015,
-    "p_label":0.3610305958,
-    "lift":1.1966639573
+    "p_label_given_evidence":0.4337349398,
+    "p_label":0.3610870194,
+    "lift":1.2011922791
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"chest_infection",
-    "p_label_given_evidence":0.0296096904,
-    "p_label":0.0541062802,
-    "lift":0.5472505287
+    "p_label_given_evidence":0.0265060241,
+    "p_label":0.0526163631,
+    "lift":0.5037600953
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.0901749664,
-    "p_label":0.0904991948,
-    "lift":0.9964173328
+    "p_label_given_evidence":0.0891566265,
+    "p_label":0.0901994796,
+    "lift":0.9884383689
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0242261104,
-    "p_label":0.0457326892,
-    "lift":0.5297329062
+    "p_label_given_evidence":0.0240963855,
+    "p_label":0.0462561434,
+    "lift":0.5209337349
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"opacity",
-    "p_label_given_evidence":0.200538358,
-    "p_label":0.2286634461,
-    "lift":0.8770022558
+    "p_label_given_evidence":0.1939759036,
+    "p_label":0.2260769008,
+    "lift":0.8580085046
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"atelectasis",
-    "p_label_given_evidence":0.067294751,
-    "p_label":0.0811594203,
-    "lift":0.8291674678
+    "p_label_given_evidence":0.0698795181,
+    "p_label":0.08065915,
+    "lift":0.8663557456
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0444145357,
-    "p_label":0.0743961353,
-    "lift":0.5970005768
+    "p_label_given_evidence":0.0445783133,
+    "p_label":0.0728534258,
+    "lift":0.6118904188
   },
   {
     "evidence":"E_14",
     "question":"Do you have chest pain even at rest?",
-    "n":743,
+    "n":830,
     "label":"edema_congestion",
-    "p_label_given_evidence":0.0228802153,
-    "p_label":0.023510467,
-    "lift":0.9731927211
+    "p_label_given_evidence":0.021686747,
+    "p_label":0.0239953744,
+    "lift":0.9037886486
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"normal",
-    "p_label_given_evidence":0.2222222222,
-    "p_label":0.3610305958,
-    "lift":0.6155218555
+    "p_label_given_evidence":0.2338308458,
+    "p_label":0.3610870194,
+    "lift":0.6475747762
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"chest_infection",
-    "p_label_given_evidence":0.0526315789,
-    "p_label":0.0541062802,
-    "lift":0.9727443609
+    "p_label_given_evidence":0.0547263682,
+    "p_label":0.0526163631,
+    "lift":1.0401016894
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.0292397661,
-    "p_label":0.0904991948,
-    "lift":0.3230942124
+    "p_label_given_evidence":0.0298507463,
+    "p_label":0.0901994796,
+    "lift":0.3309414466
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0701754386,
-    "p_label":0.0457326892,
-    "lift":1.5344699778
+    "p_label_given_evidence":0.07960199,
+    "p_label":0.0462561434,
+    "lift":1.7208955224
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"opacity",
-    "p_label_given_evidence":0.2865497076,
-    "p_label":0.2286634461,
-    "lift":1.2531504818
+    "p_label_given_evidence":0.2835820896,
+    "p_label":0.2260769008,
+    "lift":1.2543611864
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"atelectasis",
-    "p_label_given_evidence":0.0701754386,
-    "p_label":0.0811594203,
-    "lift":0.8646616541
+    "p_label_given_evidence":0.0646766169,
+    "p_label":0.08065915,
+    "lift":0.8018509603
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0526315789,
-    "p_label":0.0743961353,
-    "lift":0.7074504443
+    "p_label_given_evidence":0.0497512438,
+    "p_label":0.0728534258,
+    "lift":0.6828950486
   },
   {
     "evidence":"E_34",
     "question":"Do you have an active cancer?",
-    "n":171,
+    "n":201,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"normal",
-    "p_label_given_evidence":0.4285714286,
-    "p_label":0.3610305958,
-    "lift":1.1870778642
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0952380952,
-    "p_label":0.0541062802,
-    "lift":1.7602040816
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0476190476,
-    "p_label":0.0904991948,
-    "lift":0.5261820031
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0457326892,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"opacity",
-    "p_label_given_evidence":0.1904761905,
-    "p_label":0.2286634461,
-    "lift":0.8329979879
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0952380952,
-    "p_label":0.0811594203,
-    "lift":1.1734693878
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0952380952,
-    "p_label":0.0743961353,
-    "lift":1.280148423
-  },
-  {
-    "evidence":"E_45",
-    "question":"Have you been coughing up blood?",
-    "n":21,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"normal",
-    "p_label_given_evidence":0.2859848485,
-    "p_label":0.3610305958,
-    "lift":0.7921346606
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0909090909,
-    "p_label":0.0541062802,
-    "lift":1.6801948052
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.1723484848,
-    "p_label":0.0904991948,
-    "lift":1.9044200906
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0738636364,
-    "p_label":0.0457326892,
-    "lift":1.6151168374
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"opacity",
-    "p_label_given_evidence":0.2821969697,
-    "p_label":0.2286634461,
-    "lift":1.2341149168
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.1003787879,
-    "p_label":0.0811594203,
-    "lift":1.2368100649
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0984848485,
-    "p_label":0.0743961353,
-    "lift":1.3237898465
-  },
-  {
-    "evidence":"E_66",
-    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
-    "n":528,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0587121212,
-    "p_label":0.023510467,
-    "lift":2.4972758406
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"normal",
-    "p_label_given_evidence":0.36,
-    "p_label":0.3610305958,
-    "lift":0.9971454059
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.16,
-    "p_label":0.0541062802,
-    "lift":2.9571428571
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.08,
-    "p_label":0.0904991948,
-    "lift":0.8839857651
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.04,
-    "p_label":0.0457326892,
-    "lift":0.8746478873
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"opacity",
-    "p_label_given_evidence":0.18,
-    "p_label":0.2286634461,
-    "lift":0.7871830986
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.08,
-    "p_label":0.0811594203,
-    "lift":0.9857142857
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.08,
-    "p_label":0.0743961353,
-    "lift":1.0753246753
-  },
-  {
-    "evidence":"E_77",
-    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
-    "n":50,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.02,
-    "p_label":0.023510467,
-    "lift":0.8506849315
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"normal",
-    "p_label_given_evidence":0.3620689655,
-    "p_label":0.3610305958,
-    "lift":1.0028761266
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0172413793,
-    "p_label":0.0541062802,
-    "lift":0.3186576355
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0172413793,
-    "p_label":0.0904991948,
-    "lift":0.1905141735
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0172413793,
-    "p_label":0.0457326892,
-    "lift":0.3770033997
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"opacity",
-    "p_label_given_evidence":0.3448275862,
-    "p_label":0.2286634461,
-    "lift":1.5080135988
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0689655172,
-    "p_label":0.0811594203,
-    "lift":0.8497536946
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.1206896552,
-    "p_label":0.0743961353,
-    "lift":1.6222570533
-  },
-  {
-    "evidence":"E_79",
-    "question":"Do you smoke cigarettes?",
-    "n":58,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"normal",
-    "p_label_given_evidence":0.3103448276,
-    "p_label":0.3610305958,
-    "lift":0.8596081085
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0541062802,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.1379310345,
-    "p_label":0.0904991948,
-    "lift":1.5241133881
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0457326892,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"opacity",
-    "p_label_given_evidence":0.1724137931,
-    "p_label":0.2286634461,
-    "lift":0.7540067994
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0689655172,
-    "p_label":0.0811594203,
-    "lift":0.8497536946
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.1379310345,
-    "p_label":0.0743961353,
-    "lift":1.8540080609
-  },
-  {
-    "evidence":"E_82",
-    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
-    "n":29,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"normal",
-    "p_label_given_evidence":0.1914893617,
-    "p_label":0.3610305958,
-    "lift":0.5303964925
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0425531915,
-    "p_label":0.0541062802,
-    "lift":0.7864741641
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.170212766,
-    "p_label":0.0904991948,
-    "lift":1.8808207769
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0425531915,
-    "p_label":0.0457326892,
-    "lift":0.9304764759
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"opacity",
-    "p_label_given_evidence":0.2553191489,
-    "p_label":0.2286634461,
-    "lift":1.1165717711
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.1276595745,
-    "p_label":0.0811594203,
-    "lift":1.5729483283
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0212765957,
-    "p_label":0.0743961353,
-    "lift":0.2859906051
-  },
-  {
-    "evidence":"E_104",
-    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
-    "n":47,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0425531915,
-    "p_label":0.023510467,
-    "lift":1.8099679394
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"normal",
-    "p_label_given_evidence":0.1428571429,
-    "p_label":0.3610305958,
-    "lift":0.3956926214
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0357142857,
-    "p_label":0.0541062802,
-    "lift":0.6600765306
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.1785714286,
-    "p_label":0.0904991948,
-    "lift":1.9731825114
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.1071428571,
-    "p_label":0.0457326892,
-    "lift":2.342806841
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"opacity",
-    "p_label_given_evidence":0.3214285714,
-    "p_label":0.2286634461,
-    "lift":1.4056841046
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.1428571429,
-    "p_label":0.0811594203,
-    "lift":1.7602040816
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0743961353,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_105",
-    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
-    "n":28,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0357142857,
-    "p_label":0.023510467,
-    "lift":1.5190802348
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"normal",
-    "p_label_given_evidence":0.25,
-    "p_label":0.3610305958,
-    "lift":0.6924620874
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0555555556,
-    "p_label":0.0541062802,
-    "lift":1.0267857143
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.1944444444,
-    "p_label":0.0904991948,
-    "lift":2.1485765125
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.1388888889,
-    "p_label":0.0457326892,
-    "lift":3.036971831
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"opacity",
-    "p_label_given_evidence":0.2777777778,
-    "p_label":0.2286634461,
-    "lift":1.2147887324
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.1111111111,
-    "p_label":0.0811594203,
-    "lift":1.369047619
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0555555556,
-    "p_label":0.0743961353,
-    "lift":0.7467532468
-  },
-  {
-    "evidence":"E_113",
-    "question":"Do you have chronic kidney failure?",
-    "n":36,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0277777778,
-    "p_label":0.023510467,
-    "lift":1.1815068493
-  },
-  {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
     "label":"normal",
     "p_label_given_evidence":0.15,
-    "p_label":0.3610305958,
-    "lift":0.4154772525
+    "p_label":0.3610870194,
+    "lift":0.4154123299
   },
   {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
     "label":"chest_infection",
+    "p_label_given_evidence":0.1,
+    "p_label":0.0526163631,
+    "lift":1.9005494505
+  },
+  {
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.15,
+    "p_label":0.0901994796,
+    "lift":1.6629807692
+  },
+  {
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.1,
+    "p_label":0.0462561434,
+    "lift":2.161875
+  },
+  {
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
+    "label":"opacity",
+    "p_label_given_evidence":0.3,
+    "p_label":0.2260769008,
+    "lift":1.3269820972
+  },
+  {
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.25,
+    "p_label":0.08065915,
+    "lift":3.0994623656
+  },
+  {
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.1,
+    "p_label":0.0728534258,
+    "lift":1.3726190476
+  },
+  {
+    "evidence":"E_39",
+    "question":"Have you felt confused or disorientated lately?",
+    "n":20,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
+    "label":"normal",
+    "p_label_given_evidence":0.4583333333,
+    "p_label":0.3610870194,
+    "lift":1.2693154524
+  },
+  {
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0833333333,
+    "p_label":0.0526163631,
+    "lift":1.5837912088
+  },
+  {
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0416666667,
+    "p_label":0.0901994796,
+    "lift":0.4619391026
+  },
+  {
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0462561434,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
+    "label":"opacity",
     "p_label_given_evidence":0.1666666667,
-    "p_label":0.0541062802,
-    "lift":3.0803571429
+    "p_label":0.2260769008,
+    "lift":0.7372122762
   },
   {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.1,
-    "p_label":0.0904991948,
-    "lift":1.1049822064
-  },
-  {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0666666667,
-    "p_label":0.0457326892,
-    "lift":1.4577464789
-  },
-  {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
-    "label":"opacity",
-    "p_label_given_evidence":0.3666666667,
-    "p_label":0.2286634461,
-    "lift":1.6035211268
-  },
-  {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
     "label":"atelectasis",
-    "p_label_given_evidence":0.1,
-    "p_label":0.0811594203,
-    "lift":1.2321428571
+    "p_label_given_evidence":0.0833333333,
+    "p_label":0.08065915,
+    "lift":1.0331541219
   },
   {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.1333333333,
-    "p_label":0.0743961353,
-    "lift":1.7922077922
+    "p_label_given_evidence":0.0833333333,
+    "p_label":0.0728534258,
+    "lift":1.1438492063
   },
   {
-    "evidence":"E_118",
-    "question":"Have you ever had pneumonia?",
-    "n":60,
+    "evidence":"E_45",
+    "question":"Have you been coughing up blood?",
+    "n":24,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"normal",
+    "p_label_given_evidence":0.4420289855,
+    "p_label":0.3610870194,
+    "lift":1.2241619382
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0434782609,
+    "p_label":0.0526163631,
+    "lift":0.8263258481
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1304347826,
+    "p_label":0.0901994796,
+    "lift":1.4460702341
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0507246377,
+    "p_label":0.0462561434,
+    "lift":1.0966032609
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"opacity",
+    "p_label_given_evidence":0.1666666667,
+    "p_label":0.2260769008,
+    "lift":0.7372122762
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0144927536,
+    "p_label":0.08065915,
+    "lift":0.1796789777
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0724637681,
+    "p_label":0.0728534258,
+    "lift":0.9946514838
+  },
+  {
+    "evidence":"E_53",
+    "question":"Do you have pain somewhere, related to your reason for consulting?",
+    "n":138,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0144927536,
+    "p_label":0.0239953744,
+    "lift":0.603981142
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"normal",
+    "p_label_given_evidence":0.2866556837,
+    "p_label":0.3610870194,
+    "lift":0.7938687029
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0906095552,
+    "p_label":0.0526163631,
+    "lift":1.7220794033
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1713344316,
+    "p_label":0.0901994796,
+    "lift":1.8995057661
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0724876442,
+    "p_label":0.0462561434,
+    "lift":1.567092257
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"opacity",
+    "p_label_given_evidence":0.2751235585,
+    "p_label":0.2260769008,
+    "lift":1.2169467887
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0988467875,
+    "p_label":0.08065915,
+    "lift":1.225487591
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.097199341,
+    "p_label":0.0728534258,
+    "lift":1.334176669
+  },
+  {
+    "evidence":"E_66",
+    "question":"Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "n":607,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0609555189,
+    "p_label":0.0239953744,
+    "lift":2.540302892
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"normal",
+    "p_label_given_evidence":0.375,
+    "p_label":0.3610870194,
+    "lift":1.0385308247
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.1607142857,
+    "p_label":0.0526163631,
+    "lift":3.0544544741
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0892857143,
+    "p_label":0.0901994796,
+    "lift":0.9898695055
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0535714286,
+    "p_label":0.0462561434,
+    "lift":1.1581473214
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"opacity",
+    "p_label_given_evidence":0.1785714286,
+    "p_label":0.2260769008,
+    "lift":0.7898702959
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.1071428571,
+    "p_label":0.08065915,
+    "lift":1.3283410138
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0714285714,
+    "p_label":0.0728534258,
+    "lift":0.9804421769
+  },
+  {
+    "evidence":"E_77",
+    "question":"Do you have a cough that produces colored or more abundant sputum than usual?",
+    "n":56,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0178571429,
+    "p_label":0.0239953744,
+    "lift":0.7441910499
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"normal",
+    "p_label_given_evidence":0.4032258065,
+    "p_label":0.3610870194,
+    "lift":1.1166998115
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0161290323,
+    "p_label":0.0526163631,
+    "lift":0.306540234
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0161290323,
+    "p_label":0.0901994796,
+    "lift":0.1788151365
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0161290323,
+    "p_label":0.0462561434,
+    "lift":0.3486895161
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"opacity",
+    "p_label_given_evidence":0.3225806452,
+    "p_label":0.2260769008,
+    "lift":1.4268624701
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.064516129,
+    "p_label":0.08065915,
+    "lift":0.7998612556
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.1129032258,
+    "p_label":0.0728534258,
+    "lift":1.5497311828
+  },
+  {
+    "evidence":"E_79",
+    "question":"Do you smoke cigarettes?",
+    "n":62,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"normal",
+    "p_label_given_evidence":0.3428571429,
+    "p_label":0.3610870194,
+    "lift":0.9495138968
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0526163631,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1142857143,
+    "p_label":0.0901994796,
+    "lift":1.267032967
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0462561434,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"opacity",
+    "p_label_given_evidence":0.1714285714,
+    "p_label":0.2260769008,
+    "lift":0.7582754841
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0571428571,
+    "p_label":0.08065915,
+    "lift":0.7084485407
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.1142857143,
+    "p_label":0.0728534258,
+    "lift":1.568707483
+  },
+  {
+    "evidence":"E_82",
+    "question":"Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "n":35,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"normal",
+    "p_label_given_evidence":0.2321428571,
+    "p_label":0.3610870194,
+    "lift":0.6429000343
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0357142857,
+    "p_label":0.0526163631,
+    "lift":0.6787676609
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1785714286,
+    "p_label":0.0901994796,
+    "lift":1.979739011
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0535714286,
+    "p_label":0.0462561434,
+    "lift":1.1581473214
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"opacity",
+    "p_label_given_evidence":0.2678571429,
+    "p_label":0.2260769008,
+    "lift":1.1848054439
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.1071428571,
+    "p_label":0.08065915,
+    "lift":1.3283410138
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0178571429,
+    "p_label":0.0728534258,
+    "lift":0.2451105442
+  },
+  {
+    "evidence":"E_104",
+    "question":"Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "n":56,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0357142857,
+    "p_label":0.0239953744,
+    "lift":1.4883820998
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"normal",
+    "p_label_given_evidence":0.2121212121,
+    "p_label":0.3610870194,
+    "lift":0.5874517796
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0303030303,
+    "p_label":0.0526163631,
+    "lift":0.5759240759
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1515151515,
+    "p_label":0.0901994796,
+    "lift":1.6797785548
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.1212121212,
+    "p_label":0.0462561434,
+    "lift":2.6204545455
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"opacity",
+    "p_label_given_evidence":0.3333333333,
+    "p_label":0.2260769008,
+    "lift":1.4744245524
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.1212121212,
+    "p_label":0.08065915,
+    "lift":1.5027696318
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0728534258,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_105",
+    "question":"Have you ever had a heart attack or do you have angina (chest pain)?",
+    "n":33,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0303030303,
+    "p_label":0.0239953744,
+    "lift":1.2628696605
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"normal",
+    "p_label_given_evidence":0.2857142857,
+    "p_label":0.3610870194,
+    "lift":0.7912615807
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0476190476,
+    "p_label":0.0526163631,
+    "lift":0.9050235479
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1904761905,
+    "p_label":0.0901994796,
+    "lift":2.1117216117
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.1428571429,
+    "p_label":0.0462561434,
+    "lift":3.0883928571
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"opacity",
+    "p_label_given_evidence":0.2380952381,
+    "p_label":0.2260769008,
+    "lift":1.0531603946
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0952380952,
+    "p_label":0.08065915,
+    "lift":1.1807475678
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0476190476,
+    "p_label":0.0728534258,
+    "lift":0.6536281179
+  },
+  {
+    "evidence":"E_113",
+    "question":"Do you have chronic kidney failure?",
+    "n":42,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0476190476,
+    "p_label":0.0239953744,
+    "lift":1.9845094664
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"normal",
+    "p_label_given_evidence":0.1643835616,
+    "p_label":0.3610870194,
+    "lift":0.4552463889
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.1643835616,
+    "p_label":0.0526163631,
+    "lift":3.1241908776
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0821917808,
+    "p_label":0.0901994796,
+    "lift":0.9112223393
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0547945205,
+    "p_label":0.0462561434,
+    "lift":1.1845890411
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"opacity",
+    "p_label_given_evidence":0.3287671233,
+    "p_label":0.2260769008,
+    "lift":1.4542269558
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0821917808,
+    "p_label":0.08065915,
+    "lift":1.0190013257
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.1369863014,
+    "p_label":0.0728534258,
+    "lift":1.8803000652
+  },
+  {
+    "evidence":"E_118",
+    "question":"Have you ever had pneumonia?",
+    "n":73,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"normal",
-    "p_label_given_evidence":0.1489361702,
-    "p_label":0.3610305958,
-    "lift":0.4125306053
+    "p_label_given_evidence":0.1538461538,
+    "p_label":0.3610870194,
+    "lift":0.4260639281
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"chest_infection",
     "p_label_given_evidence":0.0,
-    "p_label":0.0541062802,
+    "p_label":0.0526163631,
     "lift":0.0
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.0425531915,
-    "p_label":0.0904991948,
-    "lift":0.4702051942
+    "p_label_given_evidence":0.0384615385,
+    "p_label":0.0901994796,
+    "lift":0.4264053254
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0638297872,
-    "p_label":0.0457326892,
-    "lift":1.3957147138
+    "p_label_given_evidence":0.0576923077,
+    "p_label":0.0462561434,
+    "lift":1.2472355769
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"opacity",
-    "p_label_given_evidence":0.3404255319,
-    "p_label":0.2286634461,
-    "lift":1.4887623614
+    "p_label_given_evidence":0.3461538462,
+    "p_label":0.2260769008,
+    "lift":1.5311331891
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"atelectasis",
-    "p_label_given_evidence":0.1063829787,
-    "p_label":0.0811594203,
-    "lift":1.3107902736
+    "p_label_given_evidence":0.0961538462,
+    "p_label":0.08065915,
+    "lift":1.1921009098
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.4255319149,
-    "p_label":0.0743961353,
-    "lift":5.7198121028
+    "p_label_given_evidence":0.4038461538,
+    "p_label":0.0728534258,
+    "lift":5.5432692308
   },
   {
     "evidence":"E_123",
     "question":"Do you have a chronic obstructive pulmonary disease (COPD)?",
-    "n":47,
+    "n":52,
     "label":"edema_congestion",
-    "p_label_given_evidence":0.0212765957,
-    "p_label":0.023510467,
-    "lift":0.9049839697
+    "p_label_given_evidence":0.0192307692,
+    "p_label":0.0239953744,
+    "lift":0.8014365153
   },
   {
     "evidence":"E_124",
     "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"normal",
+    "p_label_given_evidence":0.4186046512,
+    "p_label":0.3610870194,
+    "lift":1.1592902229
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.023255814,
+    "p_label":0.0526163631,
+    "lift":0.4419882443
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0697674419,
+    "p_label":0.0901994796,
+    "lift":0.7734794275
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0465116279,
+    "p_label":0.0462561434,
+    "lift":1.0055232558
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"opacity",
+    "p_label_given_evidence":0.2093023256,
+    "p_label":0.2260769008,
+    "lift":0.9258014632
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.023255814,
+    "p_label":0.08065915,
+    "lift":0.2883220805
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.1162790698,
+    "p_label":0.0728534258,
+    "lift":1.59606866
+  },
+  {
+    "evidence":"E_124",
+    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "n":43,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.023255814,
+    "p_label":0.0239953744,
+    "lift":0.9691790417
+  },
+  {
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"normal",
-    "p_label_given_evidence":0.4615384615,
-    "p_label":0.3610305958,
-    "lift":1.278391546
+    "p_label_given_evidence":0.3846153846,
+    "p_label":0.3610870194,
+    "lift":1.0651598202
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"chest_infection",
-    "p_label_given_evidence":0.0256410256,
-    "p_label":0.0541062802,
-    "lift":0.4739010989
+    "p_label_given_evidence":0.0512820513,
+    "p_label":0.0526163631,
+    "lift":0.9746407439
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"cardiomegaly",
     "p_label_given_evidence":0.0769230769,
-    "p_label":0.0904991948,
-    "lift":0.8499863126
+    "p_label":0.0901994796,
+    "lift":0.8528106509
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0512820513,
-    "p_label":0.0457326892,
-    "lift":1.1213434453
+    "p_label_given_evidence":0.0769230769,
+    "p_label":0.0462561434,
+    "lift":1.6629807692
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"opacity",
-    "p_label_given_evidence":0.2307692308,
-    "p_label":0.2286634461,
-    "lift":1.0092091008
+    "p_label_given_evidence":0.2051282051,
+    "p_label":0.2260769008,
+    "lift":0.9073381861
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"atelectasis",
-    "p_label_given_evidence":0.0256410256,
-    "p_label":0.0811594203,
-    "lift":0.3159340659
+    "p_label_given_evidence":0.1538461538,
+    "p_label":0.08065915,
+    "lift":1.9073614557
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.1282051282,
-    "p_label":0.0743961353,
-    "lift":1.7232767233
+    "p_label_given_evidence":0.1025641026,
+    "p_label":0.0728534258,
+    "lift":1.4078144078
   },
   {
-    "evidence":"E_124",
-    "question":"Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "evidence":"E_148",
+    "question":"Are you feeling nauseous or do you feel like vomiting?",
     "n":39,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0256410256,
-    "p_label":0.023510467,
-    "lift":1.0906217071
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"normal",
-    "p_label_given_evidence":0.3888888889,
-    "p_label":0.3610305958,
-    "lift":1.0771632471
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0555555556,
-    "p_label":0.0541062802,
-    "lift":1.0267857143
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0833333333,
-    "p_label":0.0904991948,
-    "lift":0.9208185053
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0833333333,
-    "p_label":0.0457326892,
-    "lift":1.8221830986
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"opacity",
-    "p_label_given_evidence":0.1944444444,
-    "p_label":0.2286634461,
-    "lift":0.8503521127
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.1666666667,
-    "p_label":0.0811594203,
-    "lift":2.0535714286
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.1111111111,
-    "p_label":0.0743961353,
-    "lift":1.4935064935
-  },
-  {
-    "evidence":"E_148",
-    "question":"Are you feeling nauseous or do you feel like vomiting?",
-    "n":36,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
@@ -1085,8 +1229,8 @@
     "n":25,
     "label":"normal",
     "p_label_given_evidence":0.4,
-    "p_label":0.3610305958,
-    "lift":1.1079393399
+    "p_label":0.3610870194,
+    "lift":1.107766213
   },
   {
     "evidence":"E_155",
@@ -1094,8 +1238,8 @@
     "n":25,
     "label":"chest_infection",
     "p_label_given_evidence":0.08,
-    "p_label":0.0541062802,
-    "lift":1.4785714286
+    "p_label":0.0526163631,
+    "lift":1.5204395604
   },
   {
     "evidence":"E_155",
@@ -1103,8 +1247,8 @@
     "n":25,
     "label":"cardiomegaly",
     "p_label_given_evidence":0.24,
-    "p_label":0.0904991948,
-    "lift":2.6519572954
+    "p_label":0.0901994796,
+    "lift":2.6607692308
   },
   {
     "evidence":"E_155",
@@ -1112,8 +1256,8 @@
     "n":25,
     "label":"pleural_effusion",
     "p_label_given_evidence":0.16,
-    "p_label":0.0457326892,
-    "lift":3.4985915493
+    "p_label":0.0462561434,
+    "lift":3.459
   },
   {
     "evidence":"E_155",
@@ -1121,8 +1265,8 @@
     "n":25,
     "label":"opacity",
     "p_label_given_evidence":0.16,
-    "p_label":0.2286634461,
-    "lift":0.6997183099
+    "p_label":0.2260769008,
+    "lift":0.7077237852
   },
   {
     "evidence":"E_155",
@@ -1130,8 +1274,8 @@
     "n":25,
     "label":"atelectasis",
     "p_label_given_evidence":0.16,
-    "p_label":0.0811594203,
-    "lift":1.9714285714
+    "p_label":0.08065915,
+    "lift":1.983655914
   },
   {
     "evidence":"E_155",
@@ -1139,8 +1283,8 @@
     "n":25,
     "label":"emphysema_copd",
     "p_label_given_evidence":0.04,
-    "p_label":0.0743961353,
-    "lift":0.5376623377
+    "p_label":0.0728534258,
+    "lift":0.549047619
   },
   {
     "evidence":"E_155",
@@ -1148,1231 +1292,1303 @@
     "n":25,
     "label":"edema_congestion",
     "p_label_given_evidence":0.08,
-    "p_label":0.023510467,
-    "lift":3.402739726
+    "p_label":0.0239953744,
+    "lift":3.3339759036
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"normal",
-    "p_label_given_evidence":0.3695652174,
-    "p_label":0.3610305958,
-    "lift":1.0236396075
+    "p_label_given_evidence":0.3333333333,
+    "p_label":0.3610870194,
+    "lift":0.9231385108
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"chest_infection",
-    "p_label_given_evidence":0.0434782609,
-    "p_label":0.0541062802,
-    "lift":0.8035714286
+    "p_label_given_evidence":0.0526315789,
+    "p_label":0.0526163631,
+    "lift":1.0002891845
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.1304347826,
-    "p_label":0.0904991948,
-    "lift":1.4412811388
+    "p_label_given_evidence":0.1403508772,
+    "p_label":0.0901994796,
+    "lift":1.5560053981
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0434782609,
-    "p_label":0.0457326892,
-    "lift":0.9507042254
+    "p_label_given_evidence":0.0526315789,
+    "p_label":0.0462561434,
+    "lift":1.1378289474
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"opacity",
-    "p_label_given_evidence":0.152173913,
-    "p_label":0.2286634461,
-    "lift":0.6654929577
+    "p_label_given_evidence":0.1578947368,
+    "p_label":0.2260769008,
+    "lift":0.6984116301
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"atelectasis",
-    "p_label_given_evidence":0.0434782609,
-    "p_label":0.0811594203,
-    "lift":0.5357142857
+    "p_label_given_evidence":0.0526315789,
+    "p_label":0.08065915,
+    "lift":0.6525183928
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0869565217,
-    "p_label":0.0743961353,
-    "lift":1.1688311688
+    "p_label_given_evidence":0.0877192982,
+    "p_label":0.0728534258,
+    "lift":1.2040517962
   },
   {
     "evidence":"E_159",
     "question":"Did you lose consciousness?",
-    "n":46,
+    "n":57,
     "label":"edema_congestion",
-    "p_label_given_evidence":0.0434782609,
-    "p_label":0.023510467,
-    "lift":1.8493150685
+    "p_label_given_evidence":0.0350877193,
+    "p_label":0.0239953744,
+    "lift":1.4622701332
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"normal",
-    "p_label_given_evidence":0.1851851852,
-    "p_label":0.3610305958,
-    "lift":0.5129348796
+    "p_label_given_evidence":0.303030303,
+    "p_label":0.3610870194,
+    "lift":0.839216828
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"chest_infection",
-    "p_label_given_evidence":0.037037037,
-    "p_label":0.0541062802,
-    "lift":0.6845238095
+    "p_label_given_evidence":0.0,
+    "p_label":0.0526163631,
+    "lift":0.0
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.2222222222,
-    "p_label":0.0904991948,
-    "lift":2.4555160142
+    "p_label_given_evidence":0.0303030303,
+    "p_label":0.0901994796,
+    "lift":0.335955711
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.037037037,
-    "p_label":0.0457326892,
-    "lift":0.8098591549
+    "p_label_given_evidence":0.0303030303,
+    "p_label":0.0462561434,
+    "lift":0.6551136364
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"opacity",
     "p_label_given_evidence":0.3333333333,
-    "p_label":0.2286634461,
-    "lift":1.4577464789
+    "p_label":0.2260769008,
+    "lift":1.4744245524
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"atelectasis",
-    "p_label_given_evidence":0.0740740741,
-    "p_label":0.0811594203,
-    "lift":0.9126984127
+    "p_label_given_evidence":0.1212121212,
+    "p_label":0.08065915,
+    "lift":1.5027696318
   },
   {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.1111111111,
-    "p_label":0.0743961353,
-    "lift":1.4935064935
-  },
-  {
-    "evidence":"E_175",
-    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
-    "n":27,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.037037037,
-    "p_label":0.023510467,
-    "lift":1.5753424658
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"normal",
-    "p_label_given_evidence":0.25,
-    "p_label":0.3610305958,
-    "lift":0.6924620874
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0416666667,
-    "p_label":0.0541062802,
-    "lift":0.7700892857
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0416666667,
-    "p_label":0.0904991948,
-    "lift":0.4604092527
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0416666667,
-    "p_label":0.0457326892,
-    "lift":0.9110915493
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"opacity",
-    "p_label_given_evidence":0.25,
-    "p_label":0.2286634461,
-    "lift":1.0933098592
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.125,
-    "p_label":0.0811594203,
-    "lift":1.5401785714
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0833333333,
-    "p_label":0.0743961353,
-    "lift":1.1201298701
-  },
-  {
-    "evidence":"E_181",
-    "question":"Do you have nasal congestion or a clear runny nose?",
-    "n":24,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"normal",
-    "p_label_given_evidence":0.119047619,
-    "p_label":0.3610305958,
-    "lift":0.3297438512
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0714285714,
-    "p_label":0.0541062802,
-    "lift":1.3201530612
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0476190476,
-    "p_label":0.0904991948,
-    "lift":0.5261820031
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.1904761905,
-    "p_label":0.0457326892,
-    "lift":4.1649899396
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"opacity",
-    "p_label_given_evidence":0.3571428571,
-    "p_label":0.2286634461,
-    "lift":1.5618712274
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.2142857143,
-    "p_label":0.0811594203,
-    "lift":2.6403061224
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0476190476,
-    "p_label":0.0743961353,
-    "lift":0.6400742115
-  },
-  {
-    "evidence":"E_196",
-    "question":"Have you had surgery within the last month?",
-    "n":42,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"normal",
-    "p_label_given_evidence":0.3521126761,
-    "p_label":0.3610305958,
-    "lift":0.9752987147
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.1408450704,
-    "p_label":0.0541062802,
-    "lift":2.6031187123
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0704225352,
-    "p_label":0.0904991948,
-    "lift":0.7781564834
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0422535211,
-    "p_label":0.0457326892,
-    "lift":0.9239238246
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"opacity",
-    "p_label_given_evidence":0.2112676056,
-    "p_label":0.2286634461,
-    "lift":0.9239238246
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0704225352,
-    "p_label":0.0811594203,
-    "lift":0.8677062374
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.1126760563,
-    "p_label":0.0743961353,
-    "lift":1.5145417962
-  },
-  {
-    "evidence":"E_201",
-    "question":"Do you have a cough?",
-    "n":71,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.014084507,
-    "p_label":0.023510467,
-    "lift":0.5990738954
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"normal",
-    "p_label_given_evidence":0.4516129032,
-    "p_label":0.3610305958,
-    "lift":1.2508992547
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0541062802,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0904991948,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0322580645,
-    "p_label":0.0457326892,
-    "lift":0.7053611995
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"opacity",
-    "p_label_given_evidence":0.2580645161,
-    "p_label":0.2286634461,
-    "lift":1.1285779191
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.064516129,
-    "p_label":0.0811594203,
-    "lift":0.7949308756
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0,
-    "p_label":0.0743961353,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_214",
-    "question":"Have you noticed a wheezing sound when you exhale?",
-    "n":31,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"normal",
-    "p_label_given_evidence":0.2786885246,
-    "p_label":0.3610305958,
-    "lift":0.7719249499
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0163934426,
-    "p_label":0.0541062802,
-    "lift":0.3029859485
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0655737705,
-    "p_label":0.0904991948,
-    "lift":0.724578496
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0327868852,
-    "p_label":0.0457326892,
-    "lift":0.7169244978
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"opacity",
-    "p_label_given_evidence":0.2786885246,
-    "p_label":0.2286634461,
-    "lift":1.2187716463
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0491803279,
-    "p_label":0.0811594203,
-    "lift":0.605971897
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0491803279,
-    "p_label":0.0743961353,
-    "lift":0.6610602512
-  },
-  {
-    "evidence":"E_227",
-    "question":"Are you immunosuppressed?",
-    "n":61,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"normal",
-    "p_label_given_evidence":0.1481481481,
-    "p_label":0.3610305958,
-    "lift":0.4103479037
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.2592592593,
-    "p_label":0.0541062802,
-    "lift":4.7916666667
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.1481481481,
-    "p_label":0.0904991948,
-    "lift":1.6370106762
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.1481481481,
-    "p_label":0.0457326892,
-    "lift":3.2394366197
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"opacity",
-    "p_label_given_evidence":0.4074074074,
-    "p_label":0.2286634461,
-    "lift":1.7816901408
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"atelectasis",
     "p_label_given_evidence":0.3333333333,
-    "p_label":0.0811594203,
-    "lift":4.1071428571
+    "p_label":0.0728534258,
+    "lift":4.5753968254
   },
   {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0740740741,
-    "p_label":0.0743961353,
-    "lift":0.9956709957
-  },
-  {
-    "evidence":"X_HYPOXIA",
-    "question":"Hypoxia \/ low oxygen saturation",
-    "n":27,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0740740741,
-    "p_label":0.023510467,
-    "lift":3.1506849315
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"normal",
-    "p_label_given_evidence":0.5176470588,
-    "p_label":0.3610305958,
-    "lift":1.4338038516
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0117647059,
-    "p_label":0.0541062802,
-    "lift":0.2174369748
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0470588235,
-    "p_label":0.0904991948,
-    "lift":0.5199916265
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0235294118,
-    "p_label":0.0457326892,
-    "lift":0.5144987572
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"opacity",
-    "p_label_given_evidence":0.2,
-    "p_label":0.2286634461,
-    "lift":0.8746478873
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0588235294,
-    "p_label":0.0811594203,
-    "lift":0.724789916
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0117647059,
-    "p_label":0.0743961353,
-    "lift":0.1581359817
-  },
-  {
-    "evidence":"X_TB_SCREEN",
-    "question":"Tuberculosis screening (positive TB test \/ PPD)",
-    "n":85,
+    "evidence":"E_162",
+    "question":"Have you had an involuntary weight loss over the last 3 months?",
+    "n":33,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
     "label":"normal",
-    "p_label_given_evidence":0.298136646,
-    "p_label":0.3610305958,
-    "lift":0.8257932968
+    "p_label_given_evidence":0.2444444444,
+    "p_label":0.3610870194,
+    "lift":0.6769682413
   },
   {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0062111801,
-    "p_label":0.0541062802,
-    "lift":0.1147959184
-  },
-  {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0931677019,
-    "p_label":0.0904991948,
-    "lift":1.0294865277
-  },
-  {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0124223602,
-    "p_label":0.0457326892,
-    "lift":0.2716297787
-  },
-  {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"opacity",
-    "p_label_given_evidence":0.2546583851,
-    "p_label":0.2286634461,
-    "lift":1.1136820926
-  },
-  {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.049689441,
-    "p_label":0.0811594203,
-    "lift":0.612244898
-  },
-  {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0745341615,
-    "p_label":0.0743961353,
-    "lift":1.0018552876
-  },
-  {
-    "evidence":"X_PREOP",
-    "question":"Pre-operative \/ clearance screening",
-    "n":161,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0062111801,
-    "p_label":0.023510467,
-    "lift":0.2641878669
-  },
-  {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
-    "label":"normal",
-    "p_label_given_evidence":0.4333333333,
-    "p_label":0.3610305958,
-    "lift":1.2002676182
-  },
-  {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
     "label":"chest_infection",
     "p_label_given_evidence":0.0222222222,
-    "p_label":0.0541062802,
-    "lift":0.4107142857
+    "p_label":0.0526163631,
+    "lift":0.4223443223
   },
   {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
     "label":"cardiomegaly",
+    "p_label_given_evidence":0.1555555556,
+    "p_label":0.0901994796,
+    "lift":1.7245726496
+  },
+  {
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0222222222,
+    "p_label":0.0462561434,
+    "lift":0.4804166667
+  },
+  {
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
+    "label":"opacity",
+    "p_label_given_evidence":0.2666666667,
+    "p_label":0.2260769008,
+    "lift":1.1795396419
+  },
+  {
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
+    "label":"atelectasis",
     "p_label_given_evidence":0.0444444444,
-    "p_label":0.0904991948,
-    "lift":0.4911032028
+    "p_label":0.08065915,
+    "lift":0.5510155317
   },
   {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0222222222,
-    "p_label":0.0457326892,
-    "lift":0.485915493
-  },
-  {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
-    "label":"opacity",
-    "p_label_given_evidence":0.2111111111,
-    "p_label":0.2286634461,
-    "lift":0.9232394366
-  },
-  {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0666666667,
-    "p_label":0.0811594203,
-    "lift":0.8214285714
-  },
-  {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0222222222,
-    "p_label":0.0743961353,
-    "lift":0.2987012987
+    "p_label_given_evidence":0.0888888889,
+    "p_label":0.0728534258,
+    "lift":1.2201058201
   },
   {
-    "evidence":"X_TRAUMA",
-    "question":"Trauma, fall or accident",
-    "n":90,
+    "evidence":"E_175",
+    "question":"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "n":45,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0222222222,
+    "p_label":0.0239953744,
+    "lift":0.9261044177
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"normal",
+    "p_label_given_evidence":0.2692307692,
+    "p_label":0.3610870194,
+    "lift":0.7456118741
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0384615385,
+    "p_label":0.0526163631,
+    "lift":0.7309805579
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0384615385,
+    "p_label":0.0901994796,
+    "lift":0.4264053254
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0384615385,
+    "p_label":0.0462561434,
+    "lift":0.8314903846
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"opacity",
+    "p_label_given_evidence":0.2307692308,
+    "p_label":0.2260769008,
+    "lift":1.0207554594
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.1153846154,
+    "p_label":0.08065915,
+    "lift":1.4305210918
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0769230769,
+    "p_label":0.0728534258,
+    "lift":1.0558608059
+  },
+  {
+    "evidence":"E_181",
+    "question":"Do you have nasal congestion or a clear runny nose?",
+    "n":26,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"normal",
-    "p_label_given_evidence":0.4508196721,
-    "p_label":0.3610305958,
-    "lift":1.2487021249
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0327868852,
-    "p_label":0.0541062802,
-    "lift":0.605971897
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0737704918,
-    "p_label":0.0904991948,
-    "lift":0.815150808
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.0163934426,
-    "p_label":0.0457326892,
-    "lift":0.3584622489
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"opacity",
-    "p_label_given_evidence":0.1557377049,
-    "p_label":0.2286634461,
-    "lift":0.6810782729
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"atelectasis",
-    "p_label_given_evidence":0.0819672131,
-    "p_label":0.0811594203,
-    "lift":1.0099531616
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"emphysema_copd",
-    "p_label_given_evidence":0.0655737705,
-    "p_label":0.0743961353,
-    "lift":0.8814136683
-  },
-  {
-    "evidence":"X_PAIN_OTHER",
-    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
-    "n":122,
-    "label":"edema_congestion",
-    "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
-    "lift":0.0
-  },
-  {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
     "n":47,
     "label":"normal",
-    "p_label_given_evidence":0.0638297872,
-    "p_label":0.3610305958,
-    "lift":0.1767988308
-  },
-  {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
-    "n":47,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.085106383,
-    "p_label":0.0541062802,
-    "lift":1.5729483283
-  },
-  {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
-    "n":47,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.085106383,
-    "p_label":0.0904991948,
-    "lift":0.9404103884
-  },
-  {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
-    "n":47,
-    "label":"pleural_effusion",
     "p_label_given_evidence":0.1063829787,
-    "p_label":0.0457326892,
-    "lift":2.3261911897
+    "p_label":0.3610870194,
+    "lift":0.2946186737
   },
   {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
+    "n":47,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0638297872,
+    "p_label":0.0526163631,
+    "lift":1.2131166706
+  },
+  {
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
+    "n":47,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0638297872,
+    "p_label":0.0901994796,
+    "lift":0.7076513912
+  },
+  {
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
+    "n":47,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.170212766,
+    "p_label":0.0462561434,
+    "lift":3.679787234
+  },
+  {
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
     "n":47,
     "label":"opacity",
     "p_label_given_evidence":0.3829787234,
-    "p_label":0.2286634461,
-    "lift":1.6748576566
+    "p_label":0.2260769008,
+    "lift":1.6940196985
   },
   {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
     "n":47,
     "label":"atelectasis",
     "p_label_given_evidence":0.1914893617,
-    "p_label":0.0811594203,
-    "lift":2.3594224924
+    "p_label":0.08065915,
+    "lift":2.37405628
   },
   {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
     "n":47,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0425531915,
-    "p_label":0.0743961353,
-    "lift":0.5719812103
+    "p_label_given_evidence":0.0638297872,
+    "p_label":0.0728534258,
+    "lift":0.8761398176
   },
   {
-    "evidence":"X_DEVICE",
-    "question":"Line \/ tube \/ pacemaker placement check",
+    "evidence":"E_196",
+    "question":"Have you had surgery within the last month?",
     "n":47,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"normal",
-    "p_label_given_evidence":0.2643678161,
-    "p_label":0.3610305958,
-    "lift":0.7322587591
+    "p_label_given_evidence":0.3625,
+    "p_label":0.3610870194,
+    "lift":1.0039131305
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"chest_infection",
-    "p_label_given_evidence":0.0689655172,
-    "p_label":0.0541062802,
-    "lift":1.2746305419
+    "p_label_given_evidence":0.1375,
+    "p_label":0.0526163631,
+    "lift":2.6132554945
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.0804597701,
-    "p_label":0.0904991948,
-    "lift":0.8890661431
+    "p_label_given_evidence":0.075,
+    "p_label":0.0901994796,
+    "lift":0.8314903846
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0689655172,
-    "p_label":0.0457326892,
-    "lift":1.5080135988
+    "p_label_given_evidence":0.05,
+    "p_label":0.0462561434,
+    "lift":1.0809375
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"opacity",
-    "p_label_given_evidence":0.3333333333,
-    "p_label":0.2286634461,
-    "lift":1.4577464789
+    "p_label_given_evidence":0.2,
+    "p_label":0.2260769008,
+    "lift":0.8846547315
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"atelectasis",
-    "p_label_given_evidence":0.091954023,
-    "p_label":0.0811594203,
-    "lift":1.1330049261
+    "p_label_given_evidence":0.0875,
+    "p_label":0.08065915,
+    "lift":1.084811828
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0459770115,
-    "p_label":0.0743961353,
-    "lift":0.618002687
+    "p_label_given_evidence":0.1125,
+    "p_label":0.0728534258,
+    "lift":1.5441964286
   },
   {
-    "evidence":"X_RULE_OUT",
-    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
-    "n":87,
+    "evidence":"E_201",
+    "question":"Do you have a cough?",
+    "n":80,
     "label":"edema_congestion",
-    "p_label_given_evidence":0.0114942529,
-    "p_label":0.023510467,
-    "lift":0.4888993859
+    "p_label_given_evidence":0.0125,
+    "p_label":0.0239953744,
+    "lift":0.5209337349
   },
   {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
     "label":"normal",
+    "p_label_given_evidence":0.4722222222,
+    "p_label":0.3610870194,
+    "lift":1.307779557
+  },
+  {
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0526163631,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0901994796,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0277777778,
+    "p_label":0.0462561434,
+    "lift":0.6005208333
+  },
+  {
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
+    "label":"opacity",
     "p_label_given_evidence":0.25,
-    "p_label":0.3610305958,
-    "lift":0.6924620874
+    "p_label":0.2260769008,
+    "lift":1.1058184143
   },
   {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
-    "label":"chest_infection",
-    "p_label_given_evidence":0.0625,
-    "p_label":0.0541062802,
-    "lift":1.1551339286
-  },
-  {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
-    "label":"cardiomegaly",
-    "p_label_given_evidence":0.0625,
-    "p_label":0.0904991948,
-    "lift":0.690613879
-  },
-  {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
-    "label":"pleural_effusion",
-    "p_label_given_evidence":0.125,
-    "p_label":0.0457326892,
-    "lift":2.7332746479
-  },
-  {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
-    "label":"opacity",
-    "p_label_given_evidence":0.21875,
-    "p_label":0.2286634461,
-    "lift":0.9566461268
-  },
-  {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
     "label":"atelectasis",
-    "p_label_given_evidence":0.09375,
-    "p_label":0.0811594203,
-    "lift":1.1551339286
+    "p_label_given_evidence":0.0555555556,
+    "p_label":0.08065915,
+    "lift":0.6887694146
   },
   {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.09375,
-    "p_label":0.0743961353,
-    "lift":1.2601461039
+    "p_label_given_evidence":0.0,
+    "p_label":0.0728534258,
+    "lift":0.0
   },
   {
-    "evidence":"X_FOLLOWUP",
-    "question":"Follow-up or interval-comparison scan",
-    "n":32,
+    "evidence":"E_214",
+    "question":"Have you noticed a wheezing sound when you exhale?",
+    "n":36,
     "label":"edema_congestion",
     "p_label_given_evidence":0.0,
-    "p_label":0.023510467,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"normal",
+    "p_label_given_evidence":0.2739726027,
+    "p_label":0.3610870194,
+    "lift":0.7587439815
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0410958904,
+    "p_label":0.0526163631,
+    "lift":0.7810477194
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0684931507,
+    "p_label":0.0901994796,
+    "lift":0.7593519494
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0410958904,
+    "p_label":0.0462561434,
+    "lift":0.8884417808
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"opacity",
+    "p_label_given_evidence":0.2328767123,
+    "p_label":0.2260769008,
+    "lift":1.030077427
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0410958904,
+    "p_label":0.08065915,
+    "lift":0.5095006628
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0410958904,
+    "p_label":0.0728534258,
+    "lift":0.5640900196
+  },
+  {
+    "evidence":"E_227",
+    "question":"Are you immunosuppressed?",
+    "n":73,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0136986301,
+    "p_label":0.0239953744,
+    "lift":0.5708862849
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"normal",
+    "p_label_given_evidence":0.1379310345,
+    "p_label":0.3610870194,
+    "lift":0.3819883493
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.2413793103,
+    "p_label":0.0526163631,
+    "lift":4.5875331565
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1724137931,
+    "p_label":0.0901994796,
+    "lift":1.9114721485
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.1379310345,
+    "p_label":0.0462561434,
+    "lift":2.9818965517
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"opacity",
+    "p_label_given_evidence":0.4137931034,
+    "p_label":0.2260769008,
+    "lift":1.8303201341
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.3448275862,
+    "p_label":0.08065915,
+    "lift":4.2751205043
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0689655172,
+    "p_label":0.0728534258,
+    "lift":0.9466338259
+  },
+  {
+    "evidence":"X_HYPOXIA",
+    "question":"Hypoxia \/ low oxygen saturation",
+    "n":29,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0689655172,
+    "p_label":0.0239953744,
+    "lift":2.8741171583
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"normal",
+    "p_label_given_evidence":0.5111111111,
+    "p_label":0.3610870194,
+    "lift":1.4154790499
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0111111111,
+    "p_label":0.0526163631,
+    "lift":0.2111721612
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0444444444,
+    "p_label":0.0901994796,
+    "lift":0.4927350427
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0222222222,
+    "p_label":0.0462561434,
+    "lift":0.4804166667
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"opacity",
+    "p_label_given_evidence":0.2,
+    "p_label":0.2260769008,
+    "lift":0.8846547315
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0555555556,
+    "p_label":0.08065915,
+    "lift":0.6887694146
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0111111111,
+    "p_label":0.0728534258,
+    "lift":0.1525132275
+  },
+  {
+    "evidence":"X_TB_SCREEN",
+    "question":"Tuberculosis screening (positive TB test \/ PPD)",
+    "n":90,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"normal",
+    "p_label_given_evidence":0.2912087912,
+    "p_label":0.3610870194,
+    "lift":0.8064781496
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0054945055,
+    "p_label":0.0526163631,
+    "lift":0.104425794
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0934065934,
+    "p_label":0.0901994796,
+    "lift":1.0355557904
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.010989011,
+    "p_label":0.0462561434,
+    "lift":0.2375686813
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"opacity",
+    "p_label_given_evidence":0.2527472527,
+    "p_label":0.2260769008,
+    "lift":1.117970265
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0494505495,
+    "p_label":0.08065915,
+    "lift":0.6130804679
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0714285714,
+    "p_label":0.0728534258,
+    "lift":0.9804421769
+  },
+  {
+    "evidence":"X_PREOP",
+    "question":"Pre-operative \/ clearance screening",
+    "n":182,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0054945055,
+    "p_label":0.0239953744,
+    "lift":0.2289818615
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"normal",
+    "p_label_given_evidence":0.4368932039,
+    "p_label":0.3610870194,
+    "lift":1.2099388248
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0291262136,
+    "p_label":0.0526163631,
+    "lift":0.5535580924
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0582524272,
+    "p_label":0.0901994796,
+    "lift":0.6458177745
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0388349515,
+    "p_label":0.0462561434,
+    "lift":0.8395631068
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"opacity",
+    "p_label_given_evidence":0.1941747573,
+    "p_label":0.2260769008,
+    "lift":0.8588880888
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.067961165,
+    "p_label":0.08065915,
+    "lift":0.8425722936
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0194174757,
+    "p_label":0.0728534258,
+    "lift":0.2665279704
+  },
+  {
+    "evidence":"X_TRAUMA",
+    "question":"Trauma, fall or accident",
+    "n":103,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"normal",
+    "p_label_given_evidence":0.4598540146,
+    "p_label":0.3610870194,
+    "lift":1.2735268507
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0291970803,
+    "p_label":0.0526163631,
+    "lift":0.5549049491
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0729927007,
+    "p_label":0.0901994796,
+    "lift":0.8092363841
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0145985401,
+    "p_label":0.0462561434,
+    "lift":0.3156021898
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"opacity",
+    "p_label_given_evidence":0.1532846715,
+    "p_label":0.2260769008,
+    "lift":0.6780200497
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0729927007,
+    "p_label":0.08065915,
+    "lift":0.9049525155
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0583941606,
+    "p_label":0.0728534258,
+    "lift":0.8015293709
+  },
+  {
+    "evidence":"X_PAIN_OTHER",
+    "question":"Pain outside the chest (back, abdomen, shoulder, neck)",
+    "n":137,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"normal",
+    "p_label_given_evidence":0.0588235294,
+    "p_label":0.3610870194,
+    "lift":0.162906796
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0784313725,
+    "p_label":0.0526163631,
+    "lift":1.49062702
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.1176470588,
+    "p_label":0.0901994796,
+    "lift":1.3042986425
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.1176470588,
+    "p_label":0.0462561434,
+    "lift":2.5433823529
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"opacity",
+    "p_label_given_evidence":0.3921568627,
+    "p_label":0.2260769008,
+    "lift":1.7346171205
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.1764705882,
+    "p_label":0.08065915,
+    "lift":2.1878557875
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0392156863,
+    "p_label":0.0728534258,
+    "lift":0.5382819795
+  },
+  {
+    "evidence":"X_DEVICE",
+    "question":"Line \/ tube \/ pacemaker placement check",
+    "n":51,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
+    "lift":0.0
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"normal",
+    "p_label_given_evidence":0.287037037,
+    "p_label":0.3610870194,
+    "lift":0.7949248288
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.0555555556,
+    "p_label":0.0526163631,
+    "lift":1.0558608059
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0648148148,
+    "p_label":0.0901994796,
+    "lift":0.7185719373
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.0555555556,
+    "p_label":0.0462561434,
+    "lift":1.2010416667
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"opacity",
+    "p_label_given_evidence":0.3148148148,
+    "p_label":0.2260769008,
+    "lift":1.3925120773
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.0740740741,
+    "p_label":0.08065915,
+    "lift":0.9183592194
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0648148148,
+    "p_label":0.0728534258,
+    "lift":0.8896604938
+  },
+  {
+    "evidence":"X_RULE_OUT",
+    "question":"Scan ordered to rule out \/ evaluate a suspected finding",
+    "n":108,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0092592593,
+    "p_label":0.0239953744,
+    "lift":0.3858768407
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"normal",
+    "p_label_given_evidence":0.2432432432,
+    "p_label":0.3610870194,
+    "lift":0.673641616
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"chest_infection",
+    "p_label_given_evidence":0.1081081081,
+    "p_label":0.0526163631,
+    "lift":2.0546480546
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"cardiomegaly",
+    "p_label_given_evidence":0.0540540541,
+    "p_label":0.0901994796,
+    "lift":0.5992723493
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"pleural_effusion",
+    "p_label_given_evidence":0.1351351351,
+    "p_label":0.0462561434,
+    "lift":2.9214527027
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"opacity",
+    "p_label_given_evidence":0.2432432432,
+    "p_label":0.2260769008,
+    "lift":1.0759314302
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"atelectasis",
+    "p_label_given_evidence":0.1081081081,
+    "p_label":0.08065915,
+    "lift":1.34030805
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"emphysema_copd",
+    "p_label_given_evidence":0.0810810811,
+    "p_label":0.0728534258,
+    "lift":1.1129343629
+  },
+  {
+    "evidence":"X_FOLLOWUP",
+    "question":"Follow-up or interval-comparison scan",
+    "n":37,
+    "label":"edema_congestion",
+    "p_label_given_evidence":0.0,
+    "p_label":0.0239953744,
     "lift":0.0
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"normal",
-    "p_label_given_evidence":0.3199268739,
-    "p_label":0.3610305958,
-    "lift":0.8861489236
+    "p_label_given_evidence":0.3133333333,
+    "p_label":0.3610870194,
+    "lift":0.8677502002
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"chest_infection",
-    "p_label_given_evidence":0.0511882998,
-    "p_label":0.0541062802,
-    "lift":0.9460694698
+    "p_label_given_evidence":0.05,
+    "p_label":0.0526163631,
+    "lift":0.9502747253
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.1352833638,
-    "p_label":0.0904991948,
-    "lift":1.4948570982
+    "p_label_given_evidence":0.1333333333,
+    "p_label":0.0901994796,
+    "lift":1.4782051282
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0402193784,
-    "p_label":0.0457326892,
-    "lift":0.8794448593
+    "p_label_given_evidence":0.0433333333,
+    "p_label":0.0462561434,
+    "lift":0.9368125
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"opacity",
-    "p_label_given_evidence":0.2705667276,
-    "p_label":0.2286634461,
-    "lift":1.1832530834
+    "p_label_given_evidence":0.27,
+    "p_label":0.2260769008,
+    "lift":1.1942838875
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"atelectasis",
-    "p_label_given_evidence":0.071297989,
-    "p_label":0.0811594203,
-    "lift":0.8784930791
+    "p_label_given_evidence":0.07,
+    "p_label":0.08065915,
+    "lift":0.8678494624
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0822669104,
-    "p_label":0.0743961353,
-    "lift":1.1057954842
+    "p_label_given_evidence":0.0766666667,
+    "p_label":0.0728534258,
+    "lift":1.0523412698
   },
   {
     "evidence":"X_FEMALE",
     "question":"Female patient",
-    "n":547,
+    "n":600,
     "label":"edema_congestion",
-    "p_label_given_evidence":0.0219378428,
-    "p_label":0.023510467,
-    "lift":0.9331096141
+    "p_label_given_evidence":0.025,
+    "p_label":0.0239953744,
+    "lift":1.0418674699
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"normal",
-    "p_label_given_evidence":0.336,
-    "p_label":0.3610305958,
-    "lift":0.9306690455
+    "p_label_given_evidence":0.3452380952,
+    "p_label":0.3610870194,
+    "lift":0.9561077433
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"chest_infection",
-    "p_label_given_evidence":0.056,
-    "p_label":0.0541062802,
-    "lift":1.035
+    "p_label_given_evidence":0.0571428571,
+    "p_label":0.0526163631,
+    "lift":1.0860282575
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"cardiomegaly",
-    "p_label_given_evidence":0.096,
-    "p_label":0.0904991948,
-    "lift":1.0607829181
+    "p_label_given_evidence":0.0880952381,
+    "p_label":0.0901994796,
+    "lift":0.9766712454
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"pleural_effusion",
-    "p_label_given_evidence":0.0506666667,
-    "p_label":0.0457326892,
-    "lift":1.1078873239
+    "p_label_given_evidence":0.05,
+    "p_label":0.0462561434,
+    "lift":1.0809375
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"opacity",
-    "p_label_given_evidence":0.2853333333,
-    "p_label":0.2286634461,
-    "lift":1.2478309859
+    "p_label_given_evidence":0.2761904762,
+    "p_label":0.2260769008,
+    "lift":1.2216660577
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"atelectasis",
-    "p_label_given_evidence":0.0906666667,
-    "p_label":0.0811594203,
-    "lift":1.1171428571
+    "p_label_given_evidence":0.0904761905,
+    "p_label":0.08065915,
+    "lift":1.1217101895
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"emphysema_copd",
-    "p_label_given_evidence":0.0906666667,
-    "p_label":0.0743961353,
-    "lift":1.2187012987
+    "p_label_given_evidence":0.0857142857,
+    "p_label":0.0728534258,
+    "lift":1.1765306122
   },
   {
     "evidence":"X_MALE",
     "question":"Male patient",
-    "n":375,
+    "n":420,
     "label":"edema_congestion",
-    "p_label_given_evidence":0.0293333333,
-    "p_label":0.023510467,
-    "lift":1.2476712329
+    "p_label_given_evidence":0.0261904762,
+    "p_label":0.0239953744,
+    "lift":1.0914802065
   }
 ]
