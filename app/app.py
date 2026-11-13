@@ -113,25 +113,34 @@ with right:
     st.subheader("3. Chest X-ray (optional)")
     up = st.file_uploader("Upload a frontal chest radiograph (PNG/JPG)", type=["png", "jpg", "jpeg"])
     sample = None
+    sample_codes: set[str] = set()
     if up is None:
         test = pd.read_parquet(DATA_PROCESSED / "openi_test.parquet") if (DATA_PROCESSED / "openi_test.parquet").exists() else None
         if test is not None:
-            pick = st.selectbox("...or pick a sample from the Open-I test set",
-                                ["(none)"] + [f"uid {u}: {ind[:60]}" for u, ind in zip(test["uid"], test["indication"])])
+            # label -> positional index, so duplicate indication texts cannot pick the wrong row
+            options = {f"[{i}] uid {u}: {str(ind)[:55]}": i
+                       for i, (u, ind) in enumerate(zip(test["uid"], test["indication"]))}
+            pick = st.selectbox("...or pick a sample from the Open-I test set", ["(none)"] + list(options))
             if pick != "(none)":
-                sample = test.iloc[[f"uid {u}: {ind[:60]}" for u, ind in zip(test["uid"], test["indication"])].index(pick)]
+                sample = test.iloc[options[pick]]
     img_pil = None
     if up is not None:
         img_pil = Image.open(up).convert("RGB")
     elif sample is not None:
         img_pil = Image.open(DATA_PROCESSED / sample["image_path"]).convert("RGB")
         st.info(f"Indication: *{sample['indication']}*  \nRadiologist MeSH: `{sample['mesh']}`")
-        # pre-tick the evidences parsed from the indication
-        for code, v in sample[M["fusion"][1] if "fusion" in M else []].items():
-            if v == 1 and code.startswith("E_"):
-                ticked.add(code)
+        # evidences parsed from this patient's own indication; merged into `ticked`
+        # below (the quick check-boxes have already been rendered at this point)
+        for code in (M["fusion"][1] if "fusion" in M else []):
+            if code in sample.index and sample[code] == 1:
+                sample_codes.add(code)
     if img_pil is not None:
         st.image(img_pil, caption="Input radiograph", use_container_width=True)
+
+if sample_codes:
+    ticked |= sample_codes
+    st.caption("Symptoms parsed from the selected patient's referral: "
+               + ", ".join(sorted(questions.get(c, EXTRA_EVIDENCES.get(c, c))[:40] for c in sample_codes)))
 
 run = st.button("Run decision support", type="primary", use_container_width=True)
 
