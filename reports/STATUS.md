@@ -104,27 +104,50 @@ project: a suspected chest infection in a patient with elevated diabetes risk
 is escalated above either finding on its own, because diabetes impairs immune
 response and worsens pneumonia outcomes.
 
-## 5. What we will measure next (the honest evaluation)
+## 5. Results of the honest evaluation — complete
 
-Three models trained on the **same patients and the same split**, so the
-comparison is fair:
+Four models trained on the **same patients and the same split**
+(2,421 / 519 / 519), so the comparison is fair:
 
-1. **X-ray only** (DenseNet-121) — baseline
-2. **Symptoms only** (SymptomEncoder) — baseline
-3. **Fusion** (both + cross-modal attention) — our proposed model
+| Model | Macro AUC |
+|---|---|
+| **Fusion, without DDXPlus pre-training** | **0.8416** |
+| X-ray only (DenseNet-121) | 0.8216 |
+| Fusion, with pre-training | 0.8084 |
+| Symptoms only (SymptomEncoder) | 0.6221 |
 
-If fusion beats both baselines on macro AUC across the 8 thoracic findings,
-the project's central claim is demonstrated. We will also run an ablation
-(fusion *without* DDXPlus pre-training) to isolate how much the shared
-vocabulary contributes.
+**The central claim is demonstrated:** fusion beats the image-only baseline by
++0.020 macro AUC and ranks first on 4 of the 8 findings, with its largest gains
+on chest infection (+0.087) and atelectasis (+0.055).
+
+Two qualifications are reported with equal prominence:
+
+1. **Pre-training backfired.** The best fusion arm is the one *without* DDXPlus
+   weight transfer; transferring them dropped performance to 0.8084, below even
+   the image baseline. The encoder was fitted to dense DDXPlus questionnaires,
+   whereas Open-I yields a mean of 1.35 symptoms per patient. The shared
+   *vocabulary* is still what makes any paired dataset exist — it is the
+   *weight transfer* that failed. Only the ablation revealed this.
+2. **The +0.020 margin is from a single split** with no significance test. It
+   should be read as a consistent trend, not an established effect size.
+
+An error analysis (false positives / negatives) found a **52% miss rate on
+chest infection** at the F1-tuned threshold, and showed it is a threshold
+artefact: at a screening threshold of 0.15, sensitivity rises to 0.93.
+
+> Full write-up with all figures: **`reports/PROJECT_REPORT.md`**
 
 ## 6. Immediate next steps
 
-1. ~~Finish downloading the frontal chest radiographs (official NLM source)~~ — done
-2. Train the three Open-I models and the ablation
-3. Generate the comparison table, ROC curves and Grad-CAM examples
-4. Update the presentation with the results — slides 11, 16, 19 and the
-   GitHub URL on slide 20
+1. ~~Download the frontal chest radiographs (official NLM source)~~ — done
+2. ~~Train the four Open-I models including the ablation~~ — done
+3. ~~Generate the comparison table, ROC curves and error analysis~~ — done
+4. ~~Write the full project report with diagrams~~ — done
+   (`reports/PROJECT_REPORT.md`)
+5. **Adopt per-finding screening thresholds** — highest-impact remaining change,
+   needs no retraining: converts a 52% chest-infection miss rate into 7%
+6. **Run multiple seeds + a DeLong test** so the +0.020 margin is defensible
+7. Update the presentation — slides 11, 16, 19 and the GitHub URL on slide 20
 
 ---
 
